@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-110 -20 840 670" role="img" aria-labelledby="title description">
+  <title id="title">Your attention matters</title>
+  <desc id="description">Ideas, agents, projects, and obligations flow toward one finite attention budget.</desc>
+  <defs>
+    <filter id="soft-glow" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="9" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <radialGradient id="attention-glow">
+      <stop offset="0" stop-color="#e56f2d" stop-opacity="0.17"/>
+      <stop offset="0.67" stop-color="#e56f2d" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <style>
+    .orbit, .trace { fill: none; stroke: #121a21; stroke-opacity: 0.24; }
+    .orbit { stroke-width: 1; stroke-dasharray: 2 8; }
+    .orbit-inner { opacity: 0.7; }
+    .trace {
+      stroke-width: 1.7;
+      stroke-dasharray: 0.12 0.88;
+      stroke-linecap: round;
+      animation: trace-flow 5.5s linear infinite;
+    }
+    .trace-two { animation-delay: -1.5s; }
+    .trace-three { animation-delay: -3s; }
+    .trace-four { animation-delay: -4.4s; }
+    .source-dot { fill: #121a21; opacity: 0.72; }
+    .focus-halo {
+      fill: none;
+      stroke: #e56f2d;
+      stroke-width: 1;
+      opacity: 0.45;
+      transform-box: fill-box;
+      transform-origin: center;
+      animation: breathe 3.5s ease-in-out infinite;
+    }
+    .label {
+      fill: #4f5d68;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      font-weight: 650;
+      letter-spacing: 1.28px;
+    }
+    .focus-label { fill: #174f76; text-anchor: middle; }
+    .caption {
+      fill: #4f5d68;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 13px;
+      text-anchor: middle;
+    }
+    @keyframes trace-flow { to { stroke-dashoffset: -1; } }
+    @keyframes breathe { 50% { opacity: 0.12; transform: scale(1.35); } }
+    @media (prefers-reduced-motion: reduce) {
+      .trace, .focus-halo { animation: none; }
+    }
+  </style>
+  <rect x="-110" y="-20" width="840" height="670" fill="#f7f8f9"/>
+  <circle cx="310" cy="310" r="200" fill="url(#attention-glow)"/>
+  <circle class="orbit" cx="310" cy="310" r="238"/>
+  <circle class="orbit orbit-inner" cx="310" cy="310" r="145"/>
+  <path class="trace trace-one" pathLength="1" d="M62 154 C180 146, 191 284, 292 303"/>
+  <path class="trace trace-two" pathLength="1" d="M558 122 C446 163, 452 270, 328 303"/>
+  <path class="trace trace-three" pathLength="1" d="M548 479 C430 467, 413 348, 330 317"/>
+  <path class="trace trace-four" pathLength="1" d="M70 492 C180 470, 194 353, 292 318"/>
+  <circle class="source-dot" cx="62" cy="154" r="5"/>
+  <circle class="source-dot" cx="558" cy="122" r="5"/>
+  <circle class="source-dot" cx="548" cy="479" r="5"/>
+  <circle class="source-dot" cx="70" cy="492" r="5"/>
+  <circle class="focus-halo" cx="310" cy="310" r="54"/>
+  <circle cx="310" cy="310" r="12" fill="#e56f2d" filter="url(#soft-glow)"/>
+  <text class="label" x="45" y="159" text-anchor="end">IDEAS</text>
+  <text class="label" x="575" y="127">AGENTS</text>
+  <text class="label" x="565" y="484">PROJECTS</text>
+  <text class="label" x="53" y="497" text-anchor="end">OBLIGATIONS</text>
+  <text class="label focus-label" x="310" y="358">YOUR ATTENTION</text>
+  <text class="caption" x="310" y="610">Fig. 01 — Competing demands around one finite attention budget.</text>
+</svg>

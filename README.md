@@ -1,6 +1,14 @@
 # Hoomy
 
-Hoomy is open research into whether an AI companion can help a person move the work that matters with less attention.
+<p align="center">
+  <a href="https://hoomy.dev">
+    <img src="assets/attention.svg" width="640" alt="Ideas, agents, projects, and obligations flowing toward one finite resource: your attention.">
+  </a>
+</p>
+
+AI can do more than ever. Your attention is still the bottleneck. Hoomy explores a lifelong AI companion that learns what matters to you as your priorities change—and when to act, ask, or stay quiet. The aim is meaningful progress in real life, not more time spent managing AI. You stay in control of what it sees, remembers, and does. Our first use case is a coding-agent chief of staff, built through small experiments that anyone can inspect, contribute to, and eventually use.
+
+[Read the project charter](CHARTER.md) for the longer-term research direction.
 
 ## The first experiment
 
