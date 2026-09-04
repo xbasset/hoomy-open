@@ -1,0 +1,33 @@
+.DS_Store
+.env
+.env.*
+!.env.example
+
+# Local agent and editor state
+.agents/
+.claude/
+.codex/
+.idea/
+.vscode/
+
+# Credentials
+*.key
+*.pem
+*.p12
+
+# Private inputs and generated local state
+/data/
+/private-data/
+/runtime/
+/runs/
+/output/
+*.jsonl
+*.sqlite
+*.sqlite3
+*.db
+*.log
+
+# Temporary files
+.cache/
+tmp/
+*.tmp
