@@ -1,0 +1,2014 @@
+{
+  "base_source_commit": "e4d20a344148d1fd356d2e8f034d9946103f77c2",
+  "excluded_summary": {
+    "local_agent_configuration": 1,
+    "operator_acceptance_helper": 3,
+    "private_knowledge": 146,
+    "private_measurement_inputs": 4,
+    "unselected_marketing_prototype": 111,
+    "unselected_private_research": 4
+  },
+  "files": [
+    {
+      "bytes": 285,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": ".dockerignore",
+      "sha256": "dca3ba6e80fae690592dc346a67b7065c7713e0a336fdb3f8fb8e7043da9cca9"
+    },
+    {
+      "bytes": 498,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": ".gitignore",
+      "sha256": "1738ef5963175c80224adabfd9e4e71b9753d3829ff6a535dca23acacfcdf6ad"
+    },
+    {
+      "bytes": 553,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "AGENTS.md",
+      "sha256": "ad316430eb595405cf61088d9d0fed4525392de55ba6ea9e22c5d330f0b38641"
+    },
+    {
+      "bytes": 2425,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "CHARTER.md",
+      "sha256": "e50528551c2fc724e985e332e37e343b2cfbe6baf0bc3b40ac9a996f9700bbfc"
+    },
+    {
+      "bytes": 11357,
+      "kind": "license",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4"
+    },
+    {
+      "bytes": 441,
+      "kind": "license",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "LICENSE-DOCUMENTATION.md",
+      "sha256": "39735bef94824bd8705deaa6456f90f5523fca77cfe56a5baec32370c13b8538"
+    },
+    {
+      "bytes": 1211,
+      "kind": "license",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "NOTICE",
+      "sha256": "34c2c69e491bed443097001f8520b26709ffe5e0b9e08944882b9b488e9420b0"
+    },
+    {
+      "bytes": 7009,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "README.md",
+      "sha256": "f5b5d86786abbd95eaf423fbed74364eabdc7565f7baf44cd1dde1b62279d5ca"
+    },
+    {
+      "bytes": 333,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "SECURITY.md",
+      "sha256": "0121d9ea8347395d475eef559fb718067e8b2061e30e9b04fc65a7e026a1b082"
+    },
+    {
+      "bytes": 29921,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "agent/README.md",
+      "sha256": "565b57e7b288aa167cea74d307157da5319b648f3f9615a6fcae1ec906f034f4"
+    },
+    {
+      "bytes": 99,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/hoomy_agent/__init__.py",
+      "sha256": "5b69be0e8b39fec5d9d28987a9328026479e9273d5754872646c91deb280eb47"
+    },
+    {
+      "bytes": 12685,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/hoomy_agent/__main__.py",
+      "sha256": "9db8dab566ffbd086a9ff345ce3136a09d4e60726b6bc71c977a961e0d67eaa6"
+    },
+    {
+      "bytes": 21007,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/hoomy_agent/client.py",
+      "sha256": "19005c829bba94415fd667f3c2af72226e4a42daf5adca25f5a6233321a62de2"
+    },
+    {
+      "bytes": 20972,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/hoomy_agent/collector.py",
+      "sha256": "8400f104fd3cd54f388b11df87d0c649187924d398289ae810f37ca5f8d325cd"
+    },
+    {
+      "bytes": 8657,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/hoomy_agent/outbox.py",
+      "sha256": "fa1f44f0e6105f6c04a68e550ac3a509cbd65981838f311bcdae6966586d607d"
+    },
+    {
+      "bytes": 3782,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/hoomy_agent/policy.py",
+      "sha256": "697b78ac1e1d831ba676b51b9d57e4aee1022b92716d2dfe6bd5fa3193414d3d"
+    },
+    {
+      "bytes": 14245,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/hoomy_agent/service.py",
+      "sha256": "6b953fd91baec8ec7afab8d63be047634f6f1d7e6d5ae71f7cd50d322d48a20a"
+    },
+    {
+      "bytes": 8014,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/hoomy_agent/storage.py",
+      "sha256": "5b3a5278a395f1df3b2431d67a513a5fa362f6574dc20b5f015fd159c2cec5cb"
+    },
+    {
+      "bytes": 21129,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/hoomy_agent/stream_json.py",
+      "sha256": "6994f2cb139fa6ab7ca9b41b1190ce0953d8a17e97d643bd7e5a7cfd9539f7a0"
+    },
+    {
+      "bytes": 310,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/run.py",
+      "sha256": "41d33b683b182d223548ac51b9dd4ab89ee706029ab4f6ec1c9f2a1c8b772dfb"
+    },
+    {
+      "bytes": 1955,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/tests/backend-fixture.py",
+      "sha256": "7ff551404755afca578df090f5bc2ae0ae2c4994e7eda7f5d78f42bc78919671"
+    },
+    {
+      "bytes": 1662,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/tests/gateway-fixture.mjs",
+      "sha256": "74987aa60b4e44e39e72024cb52a81c9d812843c334101d25e4d3880665b289d"
+    },
+    {
+      "bytes": 15948,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/tests/test_agent.py",
+      "sha256": "906357da3b174b7242f8a3ced7507154484e2bc72c8d0abd29932e4af1ba0b42"
+    },
+    {
+      "bytes": 30919,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/tests/test_collection.py",
+      "sha256": "1537cc5b7d45247f0f725c9fd108de8b614713b70f8340fabadc6c9c2c314995"
+    },
+    {
+      "bytes": 5389,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/tests/test_collection_authorization.py",
+      "sha256": "33f1c4eaa55fd0d28728f7e364ad207bb66300fa7c66948ddebf5d2c17edd03b"
+    },
+    {
+      "bytes": 8891,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/tests/test_compaction.py",
+      "sha256": "0f5ea70bfae6e7422a92e7be79d960c02de499b6cdf5a0064a28e1bb3406a6e0"
+    },
+    {
+      "bytes": 6514,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/tests/test_distribution.py",
+      "sha256": "4118afdbfb201f2bb12c0f068c687919ae5b8faa0fed98ddcf32c8e437e40947"
+    },
+    {
+      "bytes": 19415,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/tests/test_gateway_integration.py",
+      "sha256": "13a4588cbdefed439ac13f73d34df6b681eddb46bd5ae17b48fe736774798964"
+    },
+    {
+      "bytes": 3816,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/tests/test_mac_service.py",
+      "sha256": "2eac12b464eb0f9f9989c4c6eb247745670fb58e28140ad4d1640033e911d857"
+    },
+    {
+      "bytes": 8249,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/tests/test_source_exclusion.py",
+      "sha256": "c634fa1b2e1daca571c775083a67f7b9d3f6a9b2b84cde6d9040791daf9e9589"
+    },
+    {
+      "bytes": 7439,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/tests/test_stream_json.py",
+      "sha256": "97de5ca5e503990d066fb6cfdff17ed7268ba2ad8c4a3ee5c3415c2665eb84d3"
+    },
+    {
+      "bytes": 13792,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/tests/test_system_service.py",
+      "sha256": "b922779ab1d102e6abfe4b391ae70c92338681364eef00397da2044e88fa860a"
+    },
+    {
+      "bytes": 6002,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "agent/tests/test_terminal.py",
+      "sha256": "324a16ebb28674381727ea52b8c60d43d74d3d859cb9b44ff1b5d9d8547b9eb5"
+    },
+    {
+      "bytes": 3542,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "assets/attention.svg",
+      "sha256": "067b625821a35207f469bc6c73241cbe4a0d5eaf031bacc5d64231757717b441"
+    },
+    {
+      "bytes": 34,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/.dockerignore",
+      "sha256": "b56010a61b7b44fdd959e46ad816af7d2b11545fb6108338ed0a253177b1b345"
+    },
+    {
+      "bytes": 104,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/.gitignore",
+      "sha256": "9e0d13ed13eda6d1010cb36f0df84a84858362f8dd745547ba07131f917076b0"
+    },
+    {
+      "bytes": 19420,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "backend/CONTRACT.md",
+      "sha256": "a74ae57d4ccb9da2b379ef06656bc134ac4b217e856b2c603f2b53dfb3101322"
+    },
+    {
+      "bytes": 2251,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "backend/DISCOVERY_WIZARD.md",
+      "sha256": "cb6144df386cfb020479c0247f6228435fcc49f9961f0504e18f7a6c3cf91dcb"
+    },
+    {
+      "bytes": 280,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/Dockerfile",
+      "sha256": "d22c4d26be21bd39df4ce41706d1290a8bbea4ddbdec0b4c5cc142cee1ee8483"
+    },
+    {
+      "bytes": 11378,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "backend/FAST_DISCOVERY.md",
+      "sha256": "368d1d730dbaf88b45167f808d88ab1f5bcd7ca41bbbc22328cb3ab324fb6529"
+    },
+    {
+      "bytes": 8382,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "backend/HYBRID_DISCOVERY.md",
+      "sha256": "fdc9a62b9c8d33fadf26c6e9f311aee85877911f350e2883bd881ff92bfe4f86"
+    },
+    {
+      "bytes": 13556,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "backend/README.md",
+      "sha256": "d1e06417d02b1ca9906742d6b1734064a999ebdf19a535853475168fd90461b4"
+    },
+    {
+      "bytes": 365,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Package.swift",
+      "sha256": "d47dd03d75863db55e3ca103634e42c028e48e7da3446484bfffee84c96f7488"
+    },
+    {
+      "bytes": 1596,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/README.md",
+      "sha256": "a75f8cbf2ce0daabdfe6bb457b2c5ab09cffef5befaa87ff895ae304c3c3769a"
+    },
+    {
+      "bytes": 4200,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/APIStore.swift",
+      "sha256": "cf751658e009b2da536a259809de8d950be873f8d710e5bf6d38d9f364f2e500"
+    },
+    {
+      "bytes": 19982,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/ActLearnView.swift",
+      "sha256": "e02818da98527e4d83c91717a0095044b6b1fc8de81c53d1f8c95422a294347f"
+    },
+    {
+      "bytes": 4393,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/ActModels.swift",
+      "sha256": "bfc7b867d7115aebbc1428ab161a2783bd4f30f1e096e94c3737dfa2a1e469bc"
+    },
+    {
+      "bytes": 2833,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/AgentExplorationProgressView.swift",
+      "sha256": "3f7efca633f140bc09b07519dc58339ce0709435c5c1331f56a629d5fb391b58"
+    },
+    {
+      "bytes": 8847,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/DiscoverySupportViews.swift",
+      "sha256": "e71cf6dfb93c541122c5caef0deff68653ed31ffc1c55f47c6299ae8f1dcfad9"
+    },
+    {
+      "bytes": 22042,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/DiscoveryWizard.swift",
+      "sha256": "d9506517385ab2be6ebfa650a6b97d7b2bd9f90e0afda48224a722de8887f444"
+    },
+    {
+      "bytes": 793,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/HoomyPilotApp.swift",
+      "sha256": "75073fd14cde5352e2cb0e06ab67116eeab269a8e6101d6f9f66f24863efa772"
+    },
+    {
+      "bytes": 3920,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/LiveAssociationsView.swift",
+      "sha256": "75183ee9bf3ff9ebde29cdee3775f4aefad19b3236130dc0d8b578ba81732791"
+    },
+    {
+      "bytes": 8448,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/Models.swift",
+      "sha256": "e909e63d38b66fa967c1f55636d322522b4025dc3b9a5c9cb0d8e9871feb535b"
+    },
+    {
+      "bytes": 12650,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/ProjectDetailView.swift",
+      "sha256": "dafdfdbec5508bf97b50f511ca21380d540499986caaf58c237d2c3549a2851e"
+    },
+    {
+      "bytes": 24588,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/ReadyIdeasView.swift",
+      "sha256": "025c4799ee00b6b2ddd62cfa9b85cad2e9ba045aba96f55d373e1bbcad427945"
+    },
+    {
+      "bytes": 10926,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/RecognitionNextSteps.swift",
+      "sha256": "b2646be25c2f31e188cbcbd2ddb8c219b819a2aeddfdf8144afb66508dcd2b17"
+    },
+    {
+      "bytes": 9838,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/RecognitionTools.swift",
+      "sha256": "54ce540eeb3fac48127776985d0f0b6e1c0d771ff37ca19b23c70fa628cc6492"
+    },
+    {
+      "bytes": 10809,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/RecognitionView.swift",
+      "sha256": "afdb0267fc4118e39a1f113506851d6b5dbef0eeaaa2c9baf71556d2afb8a782"
+    },
+    {
+      "bytes": 8802,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/ResearchExplorerView.swift",
+      "sha256": "b41908e4952037961d7ac4a0944161649223575f55b8bac4f682eacab14fdf18"
+    },
+    {
+      "bytes": 15050,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/SessionReviewView.swift",
+      "sha256": "b0eb8d36a9f33e554fa1bd5f62513b1a3a031625e5b797d7dc70320baa9618f3"
+    },
+    {
+      "bytes": 5582,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Tests/HoomyPilotTests/ActModelsTests.swift",
+      "sha256": "67157501da4144b39adc52928952443e6bc4829d4b940c65b015d007d3b2781b"
+    },
+    {
+      "bytes": 3875,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Tests/HoomyPilotTests/ModelsTests.swift",
+      "sha256": "630dcf99ebdd2d727003925cfcf6c6efa5c9fdf557fafbcff89efad6f8a60669"
+    },
+    {
+      "bytes": 1575,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/apps/HoomyPilot/Tests/HoomyPilotTests/WizardTests.swift",
+      "sha256": "51cdb9f93e128eb280edfeaf59685748b34de947f89a6de76a5168922160202b"
+    },
+    {
+      "bytes": 555,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/compose.yaml",
+      "sha256": "99a8a9a460588676263b2d697f31df0c6de9ff44bf93fba0c12fdd21461852e6"
+    },
+    {
+      "bytes": 2045,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "backend/experiments/decision_ready/README.md",
+      "sha256": "08e315de2a0c93c53494cd337a731efbe9b8fedaa2cf9dc206ac4ebf670a69ab"
+    },
+    {
+      "bytes": 2750,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/experiments/decision_ready/benchmark.py",
+      "sha256": "b50dd8c7a1fa18dc3193368e921679dce6d4b72729861e7ced730e9e45a34028"
+    },
+    {
+      "bytes": 6583,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/experiments/decision_ready/decisions.py",
+      "sha256": "62a7f1a0407e0704ff8b6e8895e6f743e35a7b8187378814c420bfe27c5efdbd"
+    },
+    {
+      "bytes": 3102,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/experiments/decision_ready/fixtures.py",
+      "sha256": "edfc3f354dcac3015e5140f1df156c3bf5355451e9f6a484f1f16ab06b8a388d"
+    },
+    {
+      "bytes": 2711,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/experiments/decision_ready/policy.py",
+      "sha256": "d9849d3c7a0236d74b3f037d758d0b26c211d17b7e1ef4a1bf909efa0efa5075"
+    },
+    {
+      "bytes": 2302,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/experiments/decision_ready/selection_smoke.py",
+      "sha256": "b2c8fda52749253663cbb6b647247bc81b5cf7f29d4899fd0c2fcaa70fb5c568"
+    },
+    {
+      "bytes": 3540,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/experiments/decision_ready/test_policy.py",
+      "sha256": "d916666c53785ce7cae6923ff0053f2324952ae45429db811eb9152ad9c682c6"
+    },
+    {
+      "bytes": 42,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/__init__.py",
+      "sha256": "5faf20add494d276d6c6db0f8bee794ca3129c1718cb368ff5dc8fc9476a9713"
+    },
+    {
+      "bytes": 15734,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/act.py",
+      "sha256": "a9bbc517aee86b0f773a848b438cfe694b52eb292b42c3a39658b656a6dd7bf8"
+    },
+    {
+      "bytes": 26076,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/act_inference.py",
+      "sha256": "5a4912d95df866ef286f8e482605a7c55e2b169a5483d1121ad0752e9c39197c"
+    },
+    {
+      "bytes": 4824,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/act_sources.py",
+      "sha256": "68dd4ed9231253af68b49f35297c8f38d1b00457d03a4a03ef082943da2bd13c"
+    },
+    {
+      "bytes": 9881,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/act_verification.py",
+      "sha256": "01da7eca623733f211b5913283ba33ea8a4dcf462cf02e05f5bfc8da7a45c5bb"
+    },
+    {
+      "bytes": 7268,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/bounded_discovery.py",
+      "sha256": "e06a58e6f9cdce5afb59826a973da0b52c16a24a9a111fd33a049eae6a402754"
+    },
+    {
+      "bytes": 6147,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/catalog.py",
+      "sha256": "43c60a735dcbc8f340e4102d92f0cd6526b0ef2cdcf24887d8c7fec35e9a9883"
+    },
+    {
+      "bytes": 10348,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/classifier.py",
+      "sha256": "0edc671bd269c0c78dced436625107090b2425b9571b9121ce55c6c690251a62"
+    },
+    {
+      "bytes": 7745,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/collector.py",
+      "sha256": "2d9996fb513412e96a620710d8c8574b54d31b79ea697d704708758d10d9fb0d"
+    },
+    {
+      "bytes": 6215,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/decisions.py",
+      "sha256": "15412da4c909fabe1a744f29f16cef06ad5728061a381bb6119415340726255f"
+    },
+    {
+      "bytes": 24882,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/edge.py",
+      "sha256": "63923c546c32ef5b79e9f03773946aa9e27e2d045235ee00534d83e6bea3267b"
+    },
+    {
+      "bytes": 1569,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/evidence_selection.py",
+      "sha256": "0743505ae8f2a31458d1c6f27543dbd1f0833071d9b329d64a3b97bc2ad371b4"
+    },
+    {
+      "bytes": 3123,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "backend/hoomy/exploration.md",
+      "sha256": "6092fc02034c5374baefbc03bac285296647e349085c6cd1ef23e8afd55f8291"
+    },
+    {
+      "bytes": 22089,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/exploration.py",
+      "sha256": "0858214dfaac1319a5165fabfd3f4084f813b031142388983e0950d0998c7d8c"
+    },
+    {
+      "bytes": 6039,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/idea_worker.py",
+      "sha256": "4bd4091f4ef28afbb2a1348e0adcc7f63e1a16ad1aac1a976d2efed1dbe7d949"
+    },
+    {
+      "bytes": 45455,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/ideas.py",
+      "sha256": "75a977398230b31d23e31090ce1eccdc242ddece01b8c1d079875b81d3c68927"
+    },
+    {
+      "bytes": 44854,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/inference.py",
+      "sha256": "4606e231d7b42d104e317ea810d87eacc078bbfdad1d36eef216153026d6f706"
+    },
+    {
+      "bytes": 24455,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/ingestion.py",
+      "sha256": "2125b0ec437fac21e28ed71ac8c8691c49453a47a3a997f6fbee996df2d665ab"
+    },
+    {
+      "bytes": 9235,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/ingestion_rehearsal.py",
+      "sha256": "fdc6fe9b455301778edf390aa45ee5e7256b5ae0c12dbe4bbc4078ab1f0a0810"
+    },
+    {
+      "bytes": 13481,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/live_discovery.py",
+      "sha256": "dcad05cf0cb510b290a0c5b6cca1786c8c54c441035c49446b9e2059faac2fe3"
+    },
+    {
+      "bytes": 2711,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/local_triage.py",
+      "sha256": "7882de4c35b319e0a845bbd5fb381645ec6752d06dc04d7caeed505b5f93f1f9"
+    },
+    {
+      "bytes": 39391,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/overview.py",
+      "sha256": "57cfe0bde7f39dfb0a1249692c4ca6022e86c0b815af7b5a609082546cc4db90"
+    },
+    {
+      "bytes": 11982,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/project_dialogue.py",
+      "sha256": "b3086c3b0910375315e178e343f4fc6cfeacf3a36ac166a922d41f731e869d73"
+    },
+    {
+      "bytes": 57099,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/project_state.py",
+      "sha256": "5cd987dab2ba8fea6f97de7f62844eff568e6f986639501bf2d611a10f4fb211"
+    },
+    {
+      "bytes": 8169,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/project_state_contract.py",
+      "sha256": "48650413dc208cac4f62a062d76c19303c1d3f39e60cfe68c2a7c6db1396367d"
+    },
+    {
+      "bytes": 4571,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/project_state_quality.py",
+      "sha256": "7f758827913ab66fcbdd9b135129d7643a35231078e416f55f7bd114b9af4c05"
+    },
+    {
+      "bytes": 16229,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/recognition.py",
+      "sha256": "593b0652145af469935857b5747c1d07c56662b581d661dd03f19f6bd078240d"
+    },
+    {
+      "bytes": 12321,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/research_explorer.py",
+      "sha256": "60b1a8d3f37c4745f00dd9ab1930f7cf63a45f5d47704ea59c88af44a0ec5450"
+    },
+    {
+      "bytes": 13514,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/server.py",
+      "sha256": "7257ebddf6e877cbea7e9c316d70388ca6766163744001b146df6632198d19d6"
+    },
+    {
+      "bytes": 53239,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/state_executor.py",
+      "sha256": "e6ad7d35eec172c3ecfa6060aeebd8c7098acf319f8f71f134d36138c1011e9e"
+    },
+    {
+      "bytes": 7550,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/state_rejection.py",
+      "sha256": "2f470f97790477f34586e349658dbcfa5a8dd649c0b2dc8ab08ec2abd0938c77"
+    },
+    {
+      "bytes": 51789,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/hoomy/store.py",
+      "sha256": "ef011e5fc9ac20633e7afafd695b4adc416edcc6db4fa178fe6107e511807a8d"
+    },
+    {
+      "bytes": 4664,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/measure_bounded.py",
+      "sha256": "ff9ce39d2cd21bc48a578f9462db6c8ea190792b082305dee02702cbdbef9b31"
+    },
+    {
+      "bytes": 22,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/requirements-agent.txt",
+      "sha256": "d8f15e39e390d38c94f0090584e24afb9a2b3542881309562664b9c60d59f768"
+    },
+    {
+      "bytes": 16638,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "backend/review/INGESTION_REVIEW.md",
+      "sha256": "82259b650e6263d445e9533e8a94761dfb133cfd407115eb8a9de1aa01c0c449"
+    },
+    {
+      "bytes": 19782,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "backend/review/TARGET_DATABASE_MODEL.md",
+      "sha256": "a97df83c7aa9e6cc0f52b2d23a29f8df30f5f1ccb3645dd414cb852edb26b96f"
+    },
+    {
+      "bytes": 21970,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/review/ingestion-explorer.html",
+      "sha256": "131530533d12b9a6545573b37934ac23a0be8440b0dd3bf45bb567d012e6696d"
+    },
+    {
+      "bytes": 6934,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/run.py",
+      "sha256": "8df371ea12072c538d288ba39110f9a61cb86a05c82e79da603237814d5bf2e2"
+    },
+    {
+      "bytes": 13182,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_act.py",
+      "sha256": "06daa8b416391d094528c18564bb5ce0196d820430383239d2f816772a7588fb"
+    },
+    {
+      "bytes": 4046,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_bounded_discovery.py",
+      "sha256": "66e8b6d1949e0e26437c6fb69b2504a0ff6b5e03ce07d458857d7c0682815aca"
+    },
+    {
+      "bytes": 4718,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_catalog.py",
+      "sha256": "9e9b6c5000ccab80066440542b42d4a137bf74a5d7c0a8cede324a7c1bd745f8"
+    },
+    {
+      "bytes": 5173,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_classifier.py",
+      "sha256": "f3f4ef80a2613f90b046839f756c17b1100a36c0d5a96463239fea35b9b727fe"
+    },
+    {
+      "bytes": 4218,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_collector.py",
+      "sha256": "acfade5277b7f954487c33e4a55dbfcb46153323f34f1f7836abde9a2c5c95cc"
+    },
+    {
+      "bytes": 2646,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_decisions.py",
+      "sha256": "d05ad9ac1686090ec1223dd70f7eca57ff995dcfdf8ba144967297cf761dde5f"
+    },
+    {
+      "bytes": 4058,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_edge.py",
+      "sha256": "248be065a8984ff92a03ef440bbe62f8fc747ff35a16be1f1c09362888ce9be1"
+    },
+    {
+      "bytes": 17036,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_end_to_end.py",
+      "sha256": "84bd32823babe8373be99e4ed0f302f5eb2f2f1e0911adef640b6924c27ec272"
+    },
+    {
+      "bytes": 6118,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_exploration.py",
+      "sha256": "c3a516f1e2991b3e4ab8ea01b0a800f0d744624d1f06a24a41f22e5928283624"
+    },
+    {
+      "bytes": 14941,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_inference.py",
+      "sha256": "80daa0541fe38f97ec2d313ecb62a5af406df81dce8a7a898ebf0c1e00555aae"
+    },
+    {
+      "bytes": 25416,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_ingestion.py",
+      "sha256": "c6263599bdcf4c1fb592c0e48927bb1cb46e957d40d08b4173def5320bf3b686"
+    },
+    {
+      "bytes": 7356,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_live_discovery.py",
+      "sha256": "d87f0e708fcdf0d1cb081aa1a1888f907c1242154ec2d5ed29420145c7b7567b"
+    },
+    {
+      "bytes": 1879,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_local_triage.py",
+      "sha256": "6e0d273976e80086b8f337d86cd41cb4e0636951d500ccc3a34e48bb33801ca8"
+    },
+    {
+      "bytes": 9882,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_overview.py",
+      "sha256": "fbb0546b098153f6f0a795988b75f3e123e7faaba211ef55c42d1a996181c709"
+    },
+    {
+      "bytes": 15478,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_project_authority.py",
+      "sha256": "1ff9b51b67001f39c7e26cdd952fe0f6ba19e3b7fd03abe4467b2e0b704f0a4d"
+    },
+    {
+      "bytes": 10881,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_project_dialogue.py",
+      "sha256": "972e86b3c08c8b2aa04b057dd4a7f2873cd64ceda010d6e63b389c0dfcd1d156"
+    },
+    {
+      "bytes": 5504,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_project_index.py",
+      "sha256": "9e104ba8d3c884a7af5a9e4f9b916910f9f4d82b5b67bdc4dba76b68120d728c"
+    },
+    {
+      "bytes": 4539,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_project_profile.py",
+      "sha256": "c13ac85d00c5962d70cb59e2cfb0a9e8e9f625d4a42dc14a1176c57138f01ff1"
+    },
+    {
+      "bytes": 66429,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_project_state.py",
+      "sha256": "3b929934ab2d8f934bd47936fc04a21af5a0372c1ac10abe5f570ffa1d78f16f"
+    },
+    {
+      "bytes": 4104,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_project_state_quality.py",
+      "sha256": "cd2836a82b0c2512f26e89bf4980357493247dd47efffe12203081076e75612e"
+    },
+    {
+      "bytes": 20393,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_ready_ideas.py",
+      "sha256": "03dce125aa7ccee3efd5436880498da8549a688e4e64ff9e923e698c62bf4ec0"
+    },
+    {
+      "bytes": 16423,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_recognition.py",
+      "sha256": "6217c575c33959b9b1761884e1d6b59424da3dbb832888f76837766d4361932a"
+    },
+    {
+      "bytes": 1174,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_run.py",
+      "sha256": "94630ca2bea09e055a61c5c64425f2ed6c8b9492aca5526de818cc93b708a9b7"
+    },
+    {
+      "bytes": 4514,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_server.py",
+      "sha256": "dc046930806ddb162c26bfd87fbcaffaf5658eeef8987f0011775df867960ad9"
+    },
+    {
+      "bytes": 6663,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_state_bounds.py",
+      "sha256": "efee300750d09edd31073ec2103db2a613bbea5e0566b3b67dbef047d135d353"
+    },
+    {
+      "bytes": 11063,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_state_deployment.py",
+      "sha256": "02c90a3afe9e82531192b44ff5b42f175212da0b415837a3a0a578e9ddb10a2e"
+    },
+    {
+      "bytes": 9608,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_state_diagnostics.py",
+      "sha256": "756639b40fb0f499408b3209220efa05707fe19a6c6ac81067fc8f780f2361da"
+    },
+    {
+      "bytes": 25717,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_state_executor.py",
+      "sha256": "cc802a4212eb3af023b433f53fe2cd43bad8c2b70ec7837c4ec5ebb03e0e34eb"
+    },
+    {
+      "bytes": 10560,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_state_method.py",
+      "sha256": "669bd7cd6079a48731118c3c094f397b1fa4afcfb3077d9e63ff616f524c825c"
+    },
+    {
+      "bytes": 4319,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_state_quality_client.py",
+      "sha256": "cdf82e798ee02b4fe0d5bcfee607a663ed9f6ea7914b3004db677bce5d2d7a35"
+    },
+    {
+      "bytes": 5834,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_state_rpc.py",
+      "sha256": "863defdb04e5eb2f16bb9ba4e95b979e7a9f30d88aeeeaf161309ed4c0577319"
+    },
+    {
+      "bytes": 10461,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_state_transport.py",
+      "sha256": "916958c1aaab0950d2323d1d533519afffa543cef3e99009cb52535be59f5058"
+    },
+    {
+      "bytes": 18932,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_state_validation.py",
+      "sha256": "dd387b36e6de3f8df6782cba78c41f420e19c0dedffb39174c6d4bc5723c4644"
+    },
+    {
+      "bytes": 5542,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_state_watch_diagnostics.py",
+      "sha256": "1fe9e54fceb03695bbfd9194218a77ada6e0b76763624dd2a3e176790ec3ecef"
+    },
+    {
+      "bytes": 4970,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_state_watch_readiness.py",
+      "sha256": "b504c157b626810454906b3464e9481fc2954279c82621c5886d0bf43310a6aa"
+    },
+    {
+      "bytes": 12917,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/test_store.py",
+      "sha256": "99f4c028368a7c228db0b337dacab4c1ea59b84770badf76d40218aad08d005c"
+    },
+    {
+      "bytes": 2486,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "backend/tests/wizard_preview.py",
+      "sha256": "8bd9e48c74ac516d8e9cdb8c8bd914e191036cfa0d4144ac513ae4f70501ff0f"
+    },
+    {
+      "bytes": 70,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "deploy/central/Caddyfile.hoomy",
+      "sha256": "3e30c8a71e78b7bf6687e6946caeea5649e9504acf8a5da0a390a2a12d122ebd"
+    },
+    {
+      "bytes": 546,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "deploy/central/Dockerfile.gateway",
+      "sha256": "7c60b6e9f44fee403eb4faf6db540ba9cd8c27073d31b16144ff111ddd934211"
+    },
+    {
+      "bytes": 7912,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "deploy/central/README.md",
+      "sha256": "903989ff0a4873dface30dcb05e70d0cea23233b596e7537756c39e8f6fbf90e"
+    },
+    {
+      "bytes": 7755,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "deploy/central/collection.md",
+      "sha256": "70bd4ba33b1d65721de634fb21fce601fd40c47e65ba2bacec5b20fd6a964947"
+    },
+    {
+      "bytes": 2346,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "deploy/central/compose.yaml",
+      "sha256": "5dcf387b8eeb984792613aa84a2a537bc11828bc4f0bf88ebb08bda544c2da38"
+    },
+    {
+      "bytes": 619,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "deploy/central/restart-central.sh",
+      "sha256": "9cb0b13846be63590face67b6a13c8335f6208512f78fce40e8ac631c2cf58b9"
+    },
+    {
+      "bytes": 3243,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "deploy/central/smoke-image.mjs",
+      "sha256": "3bd2a07919ffb94095d8bd01afad9212bbc2bee540eb19b2b8e9b190b225a7b2"
+    },
+    {
+      "bytes": 15641,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "deploy/project-state/EXECUTOR.md",
+      "sha256": "0638b4f7aed4bed9f0c46ff6145570c6ee4bb45584f67eaf422fb6cd338a04da"
+    },
+    {
+      "bytes": 2250,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "deploy/project-state/README.md",
+      "sha256": "e12b9ff4c7553f65a190f9c08259d5778774cb6f1ff28837f3a81fc73ca16929"
+    },
+    {
+      "bytes": 182,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "deploy/project-state/compose.state.yaml",
+      "sha256": "e63f7ba62f129987a8d564c3961b82e058d95734f5a67a0557bcbd6af3a90d0e"
+    },
+    {
+      "bytes": 3035,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "deploy/project-state/prepare_watch_service.py",
+      "sha256": "50e13cfd40ced63b9951725ff040e1f506696ed03e2a0051e8668e3c50d84ea3"
+    },
+    {
+      "bytes": 6552,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "deploy/project-state/rehearse_migration.py",
+      "sha256": "7399cdf8d72814d4f32bfafaaaafe55f4159b9875dc8de3251a64d415c953cc3"
+    },
+    {
+      "bytes": 257,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 493,
+      "path": "deploy/project-state/run-state.sh",
+      "sha256": "343c2fabfec3403128eda991924e432a9ce33aa6f97b4f4e4d26da7403186a0e"
+    },
+    {
+      "bytes": 4421,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "distribution/build-release.py",
+      "sha256": "0ff2360bde06b897036e76c3594a9345c87d7bef1f48236d14cae27e0d29d694"
+    },
+    {
+      "bytes": 559,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "distribution/dependencies.json",
+      "sha256": "a47591e4f5e22dfcfed4266475b5ec85f96738e11cba6618fbcb370c90bcadfc"
+    },
+    {
+      "bytes": 4925,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "distribution/install.sh",
+      "sha256": "5ed4b6873cbf3e2daea5b3148d7120fdc934032458d8040c7b38a0ff0c6f05ae"
+    },
+    {
+      "bytes": 11247,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/architecture/agentic-development-target.md",
+      "sha256": "95a966e64ecb6c05a49325be384ff71551f3980db20066d624a30bf0c1a6e44e"
+    },
+    {
+      "bytes": 34098,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/architecture/authentication-and-device-enrolment.md",
+      "sha256": "bd9ef12270c57d34489352b8478035d084df65e2b2583bdd4b2f7a4f32498d8b"
+    },
+    {
+      "bytes": 11754,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/architecture/conversation-ingestion-contract.md",
+      "sha256": "940da40ef44acecee654b48ce57688095f67937ee8113e486a7d9af793e69e3b"
+    },
+    {
+      "bytes": 12090,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/architecture/github-identity-and-repository-access.md",
+      "sha256": "c6e7812d2744ccb2844cc80a947f6885a228cd32d65523af690a04510a0f6ee1"
+    },
+    {
+      "bytes": 32346,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/architecture/multi-machine-ingestion.md",
+      "sha256": "01ecaed687bcf01d3e721b6df8e839cc8f1aeb8be578a3468aff8531f8113a28"
+    },
+    {
+      "bytes": 17484,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/architecture/project-state-api.md",
+      "sha256": "7748c2aa1ae4c169398588626ef0abae18e6707952a76ab43d611efd81215bf2"
+    },
+    {
+      "bytes": 25401,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/architecture/project-state.md",
+      "sha256": "2757cd8a3e86734f6c96f8663490990c6a58a4025890300b7ef0fedcdfc98108"
+    },
+    {
+      "bytes": 2049,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/design/brand.md",
+      "sha256": "b834eb44901ee4bd2e78515594b7a2b897c63637e25ec3e234fb33650837bc52"
+    },
+    {
+      "bytes": 10987,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/001-deterministic-project-discovery.md",
+      "sha256": "86f63d604724c9bf9ef56075dd2af5cb8ab493eea1d926e90e884b401ad52f29"
+    },
+    {
+      "bytes": 12202,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/002-hybrid-discovery-checkpoint.md",
+      "sha256": "fcdd77cc311c7619f2725d62540de304f0fed699cc2c379f04f8c8f3f38fa30f"
+    },
+    {
+      "bytes": 6363,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/003-bounded-hybrid-measurement.md",
+      "sha256": "45ccb4fc8eef400fc26b240870aed20a0f817e477779d83d5ff66b36a7ac0f70"
+    },
+    {
+      "bytes": 9661,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/004-discovery-usage-and-wizard.md",
+      "sha256": "c9cd09888fc4cb39ae33b0ec5c596304f1a9b27a5941d5c1a0bd25d507eb2685"
+    },
+    {
+      "bytes": 2274,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/005-data-design-review.md",
+      "sha256": "3aee001bdab0a1489dcf318f47f74ad62fa5189443799968b6943985cfc4979e"
+    },
+    {
+      "bytes": 7627,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/006-on-demand-act-learn.md",
+      "sha256": "79ec851b9c5454c6b1a16bcd1414b103f223b4f04a0d19d430dc7ca8a85e42ea"
+    },
+    {
+      "bytes": 5178,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/007-rex-20261007.md",
+      "sha256": "e22e1dcaec2c604ac5c819ca2d4d4723e09db98c61a2ef2140223cf83b236522"
+    },
+    {
+      "bytes": 7142,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/007-verification-and-project-facts.md",
+      "sha256": "a93ea64f058d2f1a23c59b865aa963fc19e0996dbdab0173c12c7b5f0f41bc20"
+    },
+    {
+      "bytes": 22731,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/008-ready-ideas-decisions.md",
+      "sha256": "e8c2c5e80aec0e54741729ab5ae5f18c4fda09f5503d9fd24d597bfe9d7c0b63"
+    },
+    {
+      "bytes": 10588,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/009-question-pool-and-recovery.md",
+      "sha256": "e843e3b5ff4f448a55dcc2d6795772eb0a2d3f79b2cc4a85a1d8a5b1b6315644"
+    },
+    {
+      "bytes": 7482,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/010-project-dialogue-and-research-explorer.md",
+      "sha256": "37d08f2da2601247ebd5162bd2223a4d9326ebf55561239ebed91faa6a46d081"
+    },
+    {
+      "bytes": 6074,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/010-rex-20261008.md",
+      "sha256": "c88a047e3eba750acaf993a65320f0f849f8c803c468c2d5156f11390b554043"
+    },
+    {
+      "bytes": 9083,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/011-codex-plugin-first-test.md",
+      "sha256": "f98916e8b6e40938b1f0a7cc277dd1966eaa7ccc2d9d332a2c5d621662f41463"
+    },
+    {
+      "bytes": 3876,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/experiments/012-project-profile.md",
+      "sha256": "4754322c9ff76c965dcff5c788bfce557b3179db57dcc7c0886ddcbaddad405c"
+    },
+    {
+      "bytes": 802,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/README.md",
+      "sha256": "c020bc37c25143bae898907265173ecf8b3ada6f86bdcaa8798d7b236d1eaa2f"
+    },
+    {
+      "bytes": 6030,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/collection-and-authentication-lessons.md",
+      "sha256": "e88f85efcd29d92396bf510f12395710667dff4528c91d14a1dc277f15ea81a5"
+    },
+    {
+      "bytes": 7317,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/gpc-1-perception-candidate.md",
+      "sha256": "70f1e60054a98031c0474f0028ba4f95917d6911c304277a33c1dc935e4a59f2"
+    },
+    {
+      "bytes": 10391,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/learning-pipeline.md",
+      "sha256": "abf767f3658907797c46421657a76e6c0eb4111bf485d398418ee19c6f3c5342"
+    },
+    {
+      "bytes": 2535,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/ops/README.md",
+      "sha256": "637962b8b0baed8c9bd8b3cb61803d5654ab6c568f4ddd35032d66547dc7eabe"
+    },
+    {
+      "bytes": 2659,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/ops/assumptions-register.md",
+      "sha256": "b76b0964e095064cacf8dc0ac072e9ed24fde17e1a35a70251b99734fc8e5d4a"
+    },
+    {
+      "bytes": 1788,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/ops/backlog.md",
+      "sha256": "2d5e9d7c531e509d70bcc186d4929f2bbff82f7300d14e7808b96abbdf92681f"
+    },
+    {
+      "bytes": 613,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/ops/current-goal.md",
+      "sha256": "b8e4b90e3c5e28543a77616aab756573582c06c073ab6c65b09d0f5cc37daeca"
+    },
+    {
+      "bytes": 393,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/ops/daily-review-template.md",
+      "sha256": "39ed9fbcf4fbd64d7b6b3b640569e06cc94b854d4972bfdd74e5129ddd271e1d"
+    },
+    {
+      "bytes": 1433,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/ops/decisions.md",
+      "sha256": "67a0b17c92ca7656f238ecf66cfb163179f05a44c37dfcb369d84d4a5b87d3ff"
+    },
+    {
+      "bytes": 527,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/ops/experiment-template.md",
+      "sha256": "256611728e56d7cfc8fed26bbaa5c6dca3f4725599e50c336fdb43d5942b0503"
+    },
+    {
+      "bytes": 535,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/ops/goal-template.md",
+      "sha256": "04d622e254b4380f4d48324fc24258e420f2e26d031a00295b7d7b7acdb45e7b"
+    },
+    {
+      "bytes": 18373,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/project-charter.md",
+      "sha256": "f879087564da746460d5b2e5635f899d3323668c4de6b1413cdaa7767c5a3037"
+    },
+    {
+      "bytes": 19359,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "docs/research/project-state-bounded-method.md",
+      "sha256": "ab2263c4e802555431dc5d7836d30bf645172e9f66219dd85f679ff22befc55b"
+    },
+    {
+      "bytes": 1845,
+      "kind": "research",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "experiments/EXP-0001-conversation-brief/README.md",
+      "sha256": "6b24efe9255c0c100c6d3f89decee8fc526f60b35204095592e9ebc926bc3365"
+    },
+    {
+      "bytes": 341,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy-remote-acceptance/.agents/plugins/marketplace.json",
+      "sha256": "7ad643fbbd0f50d58bcdaff46b95cc2d46ec12197d6b12fd63c4f5d98d0eaf56"
+    },
+    {
+      "bytes": 1708,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "plugins/hoomy-remote-acceptance/README.md",
+      "sha256": "e64b145570edbb31d7d6d0a397e035781b45a697aaab4228b6e39797f46bb50a"
+    },
+    {
+      "bytes": 210,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy-remote-acceptance/mcp.json",
+      "sha256": "7a0fbe924e48ca2e7ec6e8f72325ad0ad0edafb56d8f71971242ff5e8791ed01"
+    },
+    {
+      "bytes": 643,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy-remote-acceptance/plugin.json",
+      "sha256": "ec5981731c208afbf544c48e3c1ad3b6848854f6cf7c8fe84d055ad38a05d215"
+    },
+    {
+      "bytes": 4029,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "plugins/hoomy-remote-acceptance/skills/hoomy/SKILL.md",
+      "sha256": "0a99c8771e88176ba71482a8531716e06045a1a4bbf7778946fc72dfc84df2e8"
+    },
+    {
+      "bytes": 24,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy/.gitignore",
+      "sha256": "01eac943c846940d6a989697e4eb0bdb332a1c7d6f82843182401368954e03b6"
+    },
+    {
+      "bytes": 7646,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "plugins/hoomy/README.md",
+      "sha256": "7a4ba97c1bc94a6bd06fe5e539173baa5868fcfbddaaef0b48f030384bf61c9c"
+    },
+    {
+      "bytes": 9913,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy/bridge.mjs",
+      "sha256": "7e0d237068b05bf2480cd0d44b27a58047a5e6e4ff5369b8b809f494b46eb1b4"
+    },
+    {
+      "bytes": 242,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy/mcp.json",
+      "sha256": "99958303a3719283194361d9335db6de61302e6c1e4c8c0d27c85b02ee4590c1"
+    },
+    {
+      "bytes": 192,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy/mcp.remote.json",
+      "sha256": "0798dc7102bcf285e4539926c7693a94dbd1f0ee14e4e541a9374e715c9b119c"
+    },
+    {
+      "bytes": 40091,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy/package-lock.json",
+      "sha256": "30eee875ed94e243d8a8ca38e735207dc92d767dbaab4c5e1c30c717c8c7824c"
+    },
+    {
+      "bytes": 321,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy/package.json",
+      "sha256": "78072ab6d8c499b3cace161f6161e75e5a140ce4e63f135f97cf1711d2bc6c8d"
+    },
+    {
+      "bytes": 580,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy/plugin.json",
+      "sha256": "34cf3ec51d0f349b52d75d5ac9f687fd0b35a2c0657c313defe6f90325f33ada"
+    },
+    {
+      "bytes": 4029,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy/remote-bridge.mjs",
+      "sha256": "a470521c8c951538065438754529195d127f7341c34c50a7918d1dd4d16f7bf7"
+    },
+    {
+      "bytes": 12466,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy/server.mjs",
+      "sha256": "955cc17449a38cd5985d1ea7fae0439c1952237561a29cc7b76a57111f1104a1"
+    },
+    {
+      "bytes": 3724,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "plugins/hoomy/skills/hoomy/SKILL.md",
+      "sha256": "37f1fc1866cc0c9339309d1a52045f2618034163a4c80b69b2cc9e4cef257f3c"
+    },
+    {
+      "bytes": 7608,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy/tests/bridge.test.mjs",
+      "sha256": "9432b2fb2644b1effe5521492d0a8f7cd62b7dfee3300462b6e238d6db50d001"
+    },
+    {
+      "bytes": 5276,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy/tests/remote-bridge.test.mjs",
+      "sha256": "8785a33e7f60145537f3c36239be1631a26fc42f0ca99dab162fcd6ed6739f8b"
+    },
+    {
+      "bytes": 22521,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy/tests/ui-evidence.test.mjs",
+      "sha256": "983099d2f8b5578b2c72df4afcd2ef4e128e853e029d05ed36ecc97f33e4fc1f"
+    },
+    {
+      "bytes": 44452,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "plugins/hoomy/ui/home.html",
+      "sha256": "02278d4a02e93f2d00dd5300d97c0d60d1c117fc8f91b9512be16262d7c77c0e"
+    },
+    {
+      "bytes": 4846,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "release/README.md",
+      "sha256": "1906ac429c1ef7354b33f9b57e6ce9aba94d66bbc44efa23e07602a53325aecf"
+    },
+    {
+      "bytes": 31568,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "release/public-export.json",
+      "sha256": "6c0fd53283ee895d2dce575124bd8bd5b5a378e8b44f6b199ba1ef2ae96d40c9"
+    },
+    {
+      "bytes": 29,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/.gitignore",
+      "sha256": "57d63baed1b84d259b04639e51a7fa4cbdbefa38f1d1b666db61da76eadc5b5c"
+    },
+    {
+      "bytes": 16224,
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/README.md",
+      "sha256": "1a69922715698fa4d16261ae50dd463333cf903617077b53fdacac88e1dcaac4"
+    },
+    {
+      "bytes": 1343,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/backend-client.mjs",
+      "sha256": "d78e55dcf38bb911829ef6e12663fce090c56ffac7f8ccb004aceaf524a516df"
+    },
+    {
+      "bytes": 3605,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/config.mjs",
+      "sha256": "9d073a32836c088dd50ebaa1ec9a99f2aa881ef4413481c5ff21ba00cd0a0f76"
+    },
+    {
+      "bytes": 43279,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/gateway.mjs",
+      "sha256": "e264600fa7c7e2b50a4efc155b3f71f81e71aeb32c200f2d472b53bd161db3dc"
+    },
+    {
+      "bytes": 5005,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/ingestion-routes.mjs",
+      "sha256": "a7d47896e5d44e1e073d281183e906e3b6200ca2a6afa048970cab3477c9bab1"
+    },
+    {
+      "bytes": 11015,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/ingestion.mjs",
+      "sha256": "95a12957332608518ebad2851cbe4362aefac7459db78c5bea040ae8ad3a7425"
+    },
+    {
+      "bytes": 713,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/main.mjs",
+      "sha256": "a043e38b8acae7408ef9c38470b587922bb086df4a448349e7b9716031aaa545"
+    },
+    {
+      "bytes": 4570,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/mcp.mjs",
+      "sha256": "c3124d8ff787f213fd33537550a05bfc5e60963e4355517a4d10fe8f778dad79"
+    },
+    {
+      "bytes": 48171,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/package-lock.json",
+      "sha256": "4190bf0b43b69df034489d2ac75ee6fa3432d43a49950747703e3a2c9c920a23"
+    },
+    {
+      "bytes": 378,
+      "kind": "configuration",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/package.json",
+      "sha256": "cd0087d3ce4907bc39ac9b843c91d7d0665d3567e6bc95ee06db644dae3f13b2"
+    },
+    {
+      "bytes": 17011,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/project-state-routes.mjs",
+      "sha256": "e3c88f0921816a8f4ec3f8c237605f1a149d3c678482233c94cf911b94b1b224"
+    },
+    {
+      "bytes": 4380,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/release.mjs",
+      "sha256": "3e9f62de0d2ddcaf4011dcf4717fc10e8a2dda6c1626f54d5903038f8218b8a9"
+    },
+    {
+      "bytes": 4845,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/store.mjs",
+      "sha256": "228e6569a27980d0a16af1a80749a67845867615037c652bf38600a5f6a85e61"
+    },
+    {
+      "bytes": 53063,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/tests/auth.test.mjs",
+      "sha256": "a44627a38057806f5364796359278a6e72506b9e00004e9b4b400fb1957d4a48"
+    },
+    {
+      "bytes": 11607,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/tests/backend-integration.test.mjs",
+      "sha256": "70e7beac8df366eec48931b4c346edc47766b70c17645fb2cacfb73268e8d093"
+    },
+    {
+      "bytes": 10665,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/tests/device-navigation.test.mjs",
+      "sha256": "a81a47206c9023d0b92a412ba45cd8953c0c3be9cfeada2c9184db7024d21881"
+    },
+    {
+      "bytes": 26436,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/tests/ingestion-integration.test.mjs",
+      "sha256": "0c56f060ef65275ea41450818a231f3aa522f027bd44e16191c6815c1da3b925"
+    },
+    {
+      "bytes": 6566,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/tests/ingestion.test.mjs",
+      "sha256": "a6119875931101aa3eeb6555720fa1812ea78983e0730f2c367cdf5f8adb27d9"
+    },
+    {
+      "bytes": 17823,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/tests/mcp-authorization.test.mjs",
+      "sha256": "9485e768cd3c3e903f635cb2a3454f832130d7f52d058106a3b6151e3f79c147"
+    },
+    {
+      "bytes": 26224,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/tests/project-state.test.mjs",
+      "sha256": "06d87941a6eee924708b48845e71a36f476e8123fe570dfbb336db63e4e2737b"
+    },
+    {
+      "bytes": 9360,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/tests/release.test.mjs",
+      "sha256": "093132271b414b99d43a79b8b3de9e5480ca47df4bd3cf352b988c058f965741"
+    },
+    {
+      "bytes": 12077,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/tests/security-review.test.mjs",
+      "sha256": "05d4c155678e58aeae8aa8dc56e83bd506c355743ba77c3eae0eceb98bc4225f"
+    },
+    {
+      "bytes": 1169,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "services/hoomy-gateway/views.mjs",
+      "sha256": "f5456313e5d511ea59a309ace7fa7870889ae2a16967ff1221645123b49f2652"
+    },
+    {
+      "bytes": 14380,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "tools/export_public.py",
+      "sha256": "46b7ebb39aff363eca1e25c9e6f816a42eed865605b36fa83f7b2512e8a1fcc8"
+    },
+    {
+      "bytes": 11129,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "tools/package_candidate.py",
+      "sha256": "46e2b0bfa85ab2c2b3307716ad981c93c6810b2002c21a644a0648ed59872fcf"
+    },
+    {
+      "bytes": 9018,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "tools/tests/test_export_public.py",
+      "sha256": "74cb4af76cceae66ff537c0942943a884ebe06f8f3c99c1b43e2ae07e0c741b7"
+    },
+    {
+      "bytes": 11696,
+      "kind": "code",
+      "license": "Apache-2.0",
+      "mode": 420,
+      "path": "tools/tests/test_package_candidate.py",
+      "sha256": "008d72cc8d10b71c547c6d0b67a702f47747d5b34ba7ccc0b993badf73792a6a"
+    }
+  ],
+  "manifest_sha256": "6c0fd53283ee895d2dce575124bd8bd5b5a378e8b44f6b199ba1ef2ae96d40c9",
+  "release": {
+    "name": "Hoomy",
+    "status": "review-candidate",
+    "version": "0.0.1"
+  },
+  "schema_version": 1,
+  "source_commit": "53b5119504fa27785d4c4d47f51fb1d36af86907",
+  "source_dirty": false
+}

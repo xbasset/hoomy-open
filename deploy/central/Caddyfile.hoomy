@@ -1,0 +1,3 @@
+{$HOOMY_PUBLIC_HOST} {
+    reverse_proxy hoomy-central-gateway:8780
+}

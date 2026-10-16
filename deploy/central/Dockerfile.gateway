@@ -1,0 +1,17 @@
+FROM node:24-bookworm-slim
+
+ENV NODE_ENV=production
+WORKDIR /app
+
+COPY services/hoomy-gateway/package*.json ./services/hoomy-gateway/
+RUN cd services/hoomy-gateway && npm ci --omit=dev
+COPY plugins/hoomy/package*.json ./plugins/hoomy/
+RUN cd plugins/hoomy && npm ci --omit=dev
+
+COPY services/hoomy-gateway/ ./services/hoomy-gateway/
+COPY plugins/hoomy/ ./plugins/hoomy/
+RUN mkdir -p /var/lib/hoomy-auth && chown node:node /var/lib/hoomy-auth && chmod 700 /var/lib/hoomy-auth
+
+USER node
+EXPOSE 8780
+CMD ["node", "services/hoomy-gateway/main.mjs"]

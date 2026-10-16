@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="fr">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hoomy · Mes projets</title>
+<style>
+/* Brand tokens match hoomy.dev; product controls use the same visual vocabulary. */
+:root {
+  color-scheme: light dark;
+  --paper:#f7f8f9; --ink:#121a21; --muted:#4f5d68;
+  --line:rgba(18,26,33,.24); --signal:#e56f2d; --signal-dark:#174f76;
+  --field:#e8eef2; --night:#142a3a; --night-muted:#d3dbe0;
+  --serif:Charter,"Iowan Old Style","Palatino Linotype",Palatino,Georgia,serif;
+  --mono:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;
+  --bg:var(--paper); --card:#fff; --accent:var(--signal-dark); --soft:var(--field);
+  --on-accent:#fff; --error:#9a3412; --error-bg:#fff0e8;
+  font:15px/1.55 Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink)}
+main{max-width:780px;margin:0 auto;padding:32px 28px 60px}
+header{display:flex;align-items:center;gap:16px;margin-bottom:38px}
+.wordmark{font-size:22px;font-weight:760;letter-spacing:-.055em}
+header span{font:10px/1.5 var(--mono);letter-spacing:.07em;text-transform:uppercase;color:var(--muted);margin-left:auto}
+h1,h2,p{text-wrap:pretty}
+h1,h2{font-family:var(--serif);font-weight:400;letter-spacing:-.042em}
+h1{font-size:clamp(34px,5vw,46px);line-height:1.08;margin:0 0 16px}
+h2{font-size:28px;line-height:1.15;margin:8px 0 12px}
+p{margin:8px 0 16px}.muted,small{color:var(--muted)}small{font-size:12px}
+.eyebrow{font:600 11px/1.5 var(--mono);text-transform:uppercase;letter-spacing:.11em;color:var(--muted)}
+form{margin:24px 0}textarea,input,select,button,a.button{font:inherit}
+textarea,input,select{background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:4px;padding:11px}
+textarea{width:100%;resize:vertical;min-height:94px}
+textarea:focus,input:focus,select:focus,button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid var(--signal);outline-offset:3px}
+label{display:block;margin:10px 0 6px;font-size:13px}
+button,a.button{border:1px solid var(--line);border-radius:4px;background:var(--card);color:var(--ink);padding:10px 16px;cursor:pointer;text-decoration:none;display:inline-block;text-align:center}
+button:hover,a.button:hover{border-color:var(--accent);background:var(--soft)}
+button.primary,a.primary{background:var(--accent);color:var(--on-accent);border-color:var(--accent)}
+button.primary:hover,a.primary:hover{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+button:disabled{opacity:.55;cursor:wait}
+.row{display:flex;gap:9px;flex-wrap:wrap;align-items:center;margin-top:14px}.row.end{justify-content:space-between}
+.card{padding:24px;border:1px solid var(--line);border-radius:4px;background:var(--card);margin-top:24px}
+.card.soft{background:var(--soft);border-left:3px solid var(--signal)}.card p{white-space:pre-line}
+.choice{display:block;text-align:left;width:100%;margin:9px 0;padding:12px 14px}
+.link{border:0;background:none;padding:0;color:var(--accent);font-size:13px;text-decoration:underline;text-underline-offset:.2em}
+a{color:var(--accent);text-underline-offset:.2em}
+.error{color:var(--error);background:var(--error-bg);border-left:3px solid var(--signal);padding:12px;margin:16px 0}.error:empty{display:none}
+details{margin-top:15px}summary{cursor:pointer;color:var(--muted);font-size:13px}
+ul{padding-left:18px;font-size:13px}li{margin:6px 0}
+.dot{display:inline-block;width:8px;height:8px;background:var(--signal);border-radius:50%;margin-right:8px;animation:pulse 1.8s infinite}
+footer{margin-top:36px;border-top:1px solid var(--line);padding-top:18px;font-size:12px;color:var(--muted)}
+nav{display:flex;gap:20px;margin-bottom:32px;border-bottom:1px solid var(--line)}
+nav button{position:relative;border:0;border-bottom:2px solid transparent;border-radius:0;padding:10px 0;background:transparent;color:var(--muted)}
+nav button[aria-pressed=true]{border-bottom-color:var(--signal);color:var(--accent);font-weight:650}
+nav button:hover{background:transparent;border-bottom-color:var(--accent)}
+.profile-picker{width:100%;margin:10px 0}.field{margin:22px 0}.field textarea{min-height:76px}
+.field label{font-weight:600;font-size:14px}.field small{display:block;margin:5px 0}
+.status{display:inline-block;background:var(--soft);color:var(--accent);padding:4px 8px;border-radius:2px;font:11px/1.5 var(--mono)}
+.idea{padding:18px 0;border-top:1px solid var(--line)}.idea h3{margin:6px 0;font-size:16px}
+.savebar{background:var(--bg);padding:14px 0;border-top:1px solid var(--line);z-index:1}
+.notice{color:var(--accent);font-size:13px}.source{display:block;margin:12px 0;color:var(--accent)}
+.source-card{padding:20px 0;border-top:1px solid var(--line);overflow-wrap:anywhere}
+.source-card h3{margin:12px 0;font-size:16px;line-height:1.4}
+.source-badges{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.source-meta,.evidence-cache{display:grid;gap:10px;margin:14px 0}
+.source-meta small,.source-card details small,.evidence-cache small{display:block;line-height:1.6}
+.source-meta p,.evidence-cache p{margin:0}
+.evidence-message{padding:16px;background:var(--soft);border-radius:4px}
+.evidence-message pre{font:inherit;margin:10px 0;line-height:1.65}
+[hidden]{display:none!important}@keyframes pulse{50%{opacity:.3}}
+@media(prefers-reduced-motion:reduce){.dot{animation:none}}
+@media(max-width:480px){main{padding:24px 18px}h1{font-size:34px}.card{padding:18px}header{margin-bottom:26px}header span{max-width:130px;text-align:right}.row>*{max-width:100%}}
+/* Dark mode is a product adaptation of the site's night palette. */
+@media(prefers-color-scheme:dark){:root{--bg:var(--night);--card:#193345;--ink:#f7f8f9;--muted:var(--night-muted);--line:rgba(211,219,224,.28);--accent:#a9d2ec;--soft:#223e51;--on-accent:#142a3a;--error:#ffc7a9;--error-bg:#3d2b25}}
+</style>
+<main>
+  <header><strong class="wordmark">Hoomy</strong><span>Du contexte à l’action</span></header>
+  <p id="connection-origin" class="notice" hidden></p>
+  <nav aria-label="Espace"><button id="projects-tab" aria-pressed="true">Mes projets</button><button id="now-tab" aria-pressed="false">Pour maintenant</button></nav>
+  <div id="error" class="error" role="alert"></div>
+  <section id="projects-screen">
+    <h1>Ce qui compte pour tes projets.</h1>
+    <p class="muted">Tes objectifs, ce que Hoomy sait et ce qu’il reste à éclaircir, au même endroit.</p>
+    <label for="profile-picker">Ouvrir la fiche d’un projet</label><select id="profile-picker" class="profile-picker"><option value="">Choisir un projet…</option></select>
+    <div id="profile-result"><p class="muted">Choisis un projet pour lire son état ou préciser tes objectifs. Un objectif suffit pour commencer.</p></div>
+  </section>
+  <section id="now-screen" hidden>
+  <h1>Un petit pas qui compte.</h1>
+  <p class="muted">De quoi as-tu envie de te rapprocher aujourd’hui ?</p>
+  <form id="request">
+    <label for="instruction">Ta demande</label>
+    <textarea id="instruction" maxlength="2000" required placeholder="J’ai 5 minutes. Qu’est-ce qui serait utile maintenant ?"></textarea>
+    <details><summary>Préciser le projet et le temps disponible</summary>
+      <label for="project">Projet</label><select id="project"><option value="">Tous mes projets actifs</option></select>
+      <label for="minutes">Minutes disponibles</label><input id="minutes" type="number" min="1" max="480" value="5">
+    </details>
+    <div class="row end"><button class="primary" id="find" type="submit">Trouver une activité</button><button class="link" id="resume" type="button" hidden>Reprendre ma dernière demande</button></div>
+  </form>
+  <section id="result" aria-live="polite"></section>
+  </section>
+  <footer>Hoomy conserve tes réponses. L’activité choisie se poursuit dans Codex.</footer>
+</main>
+<script type="module">
+const $ = id => document.getElementById(id);
+let view, selected, last, busy = false, poll, sequence = 0, hostReady;
+let mode='projects', profile=null, dirty=false;
+let projectState=null, statePoll;
+const fields=[['goal','Mon objectif','Quel résultat veux-tu obtenir pour ce projet ?'],['motivation','Pourquoi cela compte','Qu’est-ce que ce résultat changerait pour toi ?'],['priority','Ma priorité actuelle','Sur quoi veux-tu avancer en premier ?'],['constraint','Mes contraintes','Temps, échéance, énergie, dépendance à quelqu’un…'],['success_criterion','Comment reconnaître une réussite','Qu’est-ce qui te permettra de dire : cette étape est réussie ?'],['situation','Où j’en suis','Ce qui a avancé, changé ou reste bloqué. Ce récit ne valide pas automatiquement une tâche.']];
+const stateNames={pending:'À faire · état confirmé',completed:'Déjà fait',unknown:'État inconnu',stale:'À revérifier',blocked:'Bloqué',dismissed:'Écarté'};
+function date(value){return value?new Date(value).toLocaleString('fr-FR'):'Date non connue';}
+const calls = new Map();
+const embedded = window.parent !== window;
+const stages = { queued: 'Recherche en attente', researching: 'Lecture des conversations', verifying: 'Vérification de l’état', generating: 'Préparation de la proposition', ready: 'Recherche terminée' };
+
+function rpc(method, params) {
+  const id = ++sequence;
+  return new Promise((resolve,reject) => {
+    const timeout = setTimeout(() => { calls.delete(id); reject(new Error('Codex ne répond pas. Rouvre Hoomy pour réessayer.')); },20000);
+    calls.set(id,{resolve,reject,timeout});
+    window.parent.postMessage({jsonrpc:'2.0',id,method,params},'*');
+  });
+}
+window.addEventListener('message',event => {
+  if(event.source !== window.parent || !event.data || event.data.jsonrpc !== '2.0') return;
+  const message=event.data, call=calls.get(message.id);
+  if(call){clearTimeout(call.timeout);calls.delete(message.id);message.error ? call.reject(new Error(message.error.message)) : call.resolve(message.result);}
+});
+async function tool(name,args={}) {
+  let result;
+  if(embedded){await hostReady;result=await rpc('tools/call',{name,arguments:args});}
+  else {const response=await fetch('/api/tool',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({name,arguments:args})});result=await response.json();}
+  if(result.isError) throw new Error(result.content?.find(c=>c.type==='text')?.text || 'La demande a échoué.');
+  return result.structuredContent;
+}
+function el(tag,text,cls){const node=document.createElement(tag);if(text!==undefined)node.textContent=text;if(cls)node.className=cls;return node;}
+function button(text,action,cls=''){const b=el('button',text,cls);b.type='button';b.onclick=()=>run(action);return b;}
+function line(parent,tag,text,cls){if(text)parent.append(el(tag,Array.isArray(text)?text.join('\n'):text,cls));}
+function setBusy(value){busy=value;$('find').disabled=value;$('profile-picker').disabled=value;document.querySelectorAll('#result button, #profile-result button, #profile-result textarea').forEach(b=>b.disabled=value||b.dataset.authorityReadOnly==='true'||b.dataset.persistentDisabled==='true');}
+async function run(action){if(busy)return;clearTimeout(poll);$('error').textContent='';setBusy(true);try{await action();}catch(error){$('error').textContent=error.message;}finally{setBusy(false);schedule();}}
+function schedule(){clearTimeout(poll);if(mode==='now' && view?.selection?.pending)poll=setTimeout(()=>run(async()=>accept(await tool('hoomy_home',{selection_id:selected}))),1800);}
+function accept(data){view=data;selected=data.selection?.id;last=data.last_selection;
+  const connection=$('connection-origin');connection.hidden=data.connection?.mode!=='central';connection.textContent=connection.hidden?'':`Projets centralisés · ${data.connection.origin}`;
+  $('now-tab').hidden=data.capabilities?.research===false;
+  const old=$('project').value;$('project').replaceChildren(new Option('Tous mes projets actifs',''),...data.projects.map(p=>new Option(p.name,p.id)));$('project').value=old;
+  const oldProfile=$('profile-picker').value;$('profile-picker').replaceChildren(new Option('Choisir un projet…',''),...data.projects.map(p=>new Option(p.name,p.id)));$('profile-picker').value=oldProfile;
+  $('resume').hidden=!last || last.id===selected;
+  $('find').disabled=busy;
+  render();
+}
+async function choose(){const instruction=$('instruction').value.trim();if(!instruction){$('instruction').focus();throw new Error('Ajoute une courte demande pour orienter Hoomy.');}
+  accept(await tool('hoomy_choose',{instruction,attention_budget:Number($('minutes').value),...($('project').value?{project_id:$('project').value}:{})}));}
+function report(parent,job){if(!job.report)return;const details=el('details');details.append(el('summary','Ce que Hoomy a regardé'));
+  line(details,'p',job.report.summary);line(details,'p',job.report.unresolved,'muted');
+  const list=el('ul');for(const source of job.report.sources||[])line(list,'li',`${source.title}${source.read?' · lu':' · repéré, non lu'}`);for(const check of job.report.checks||[])line(list,'li',check);details.append(list);parent.append(details);}
+async function respond(response,answer=''){const q=view.selection.state_question;accept(await tool('hoomy_answer',{selection_id:selected,response,answer,...(q?{idea_id:q.id,version:q.version,revision:q.revision}:{})}));}
+function render(){const root=$('result');root.replaceChildren();const job=view.selection;
+  if(!view.can_search){const c=el('div',undefined,'card soft');line(c,'h2','La recherche n’est pas disponible');line(c,'p','Le service Hoomy doit être actif, avec le périmètre confirmé et Discover en pause.');root.append(c);}
+  if(!job){line(root,'p',view.missing_selection?'Cette demande n’est plus disponible. Tu peux en lancer une nouvelle.':'Une question utile si nécessaire, puis une activité à poursuivre dans Codex.','muted');return;}
+  const card=el('article',undefined,'card');root.append(card);
+  if(job.failure){line(card,'div','Interruption technique','eyebrow');line(card,'h2','Le choix a été interrompu.');
+    line(card,'p',job.failure.code==='timeout'?'Le service de décision a mis trop de temps à répondre.':'Le service de décision n’a pas pu terminer le choix.');
+    line(card,'p','Ta demande et tes réponses sont conservées. Tu n’as pas besoin de reformuler ton objectif.','muted');
+    card.append(button('Réessayer cette demande',async()=>accept(await tool('hoomy_retry',{selection_id:selected})),'primary'));
+    line(card,'p',job.context.instruction,'muted');report(card,job);return;}
+  if(job.pending){const heading=el('div',undefined,'eyebrow');heading.append(el('span',undefined,'dot'),document.createTextNode('Hoomy prépare la suite'));card.append(heading);
+    line(card,'h2',stages[job.progress?.stage] || job.message || 'Recherche en cours');
+    const seconds=Math.max(0,Math.floor((Date.now()-Date.parse(job.created_at))/1000));line(card,'p',`${seconds} s écoulées · la suite apparaît ici automatiquement.`,'muted');
+    if(job.progress?.sources?.length)line(card,'p',`${job.progress.sources.length} source(s) consultée(s).`);
+    if(job.progress)card.append(button('Arrêter cette recherche',async()=>accept(await tool('hoomy_cancel',{selection_id:selected})),'link'));report(card,job);return;}
+  if(job.question){const q=job.question;line(card,'div',q.project_name || 'Une précision pour avancer','eyebrow');line(card,'h2',q.prompt);line(card,'p',q.why,'muted');
+    for(const option of q.options||[]){const text=typeof option==='string'?option:option.label;card.append(button(text,()=>respond('answer',text),'choice'));}
+    const form=el('form');const label=el('label','Ta réponse');label.htmlFor='answer';const input=el('textarea');input.id='answer';input.maxLength=4000;input.required=true;input.placeholder='Ou précise ce qui compte pour toi…';form.append(label,input);const submit=el('button','Continuer','primary');submit.type='submit';form.append(submit);form.onsubmit=e=>{e.preventDefault();run(()=>respond('answer',input.value.trim()));};card.append(form);
+    const row=el('div',undefined,'row');row.append(button('Je ne sais pas',()=>respond('unknown')),button('Passer',()=>respond('skip')));card.append(row);report(card,job);return;}
+  if(job.state_question){const q=job.state_question;line(card,'div',q.project_name,'eyebrow');line(card,'h2',q.candidate.state_question);line(card,'p',q.candidate.question_reason,'muted');
+    for(const [label,value] of [['C’est déjà fait','already_done'],['C’est à faire et je peux avancer','todo'],['Je ne sais pas','unknown']])card.append(button(label,()=>respond(value),'choice'));
+    const more=el('details');more.append(el('summary','Autre situation'));for(const [label,value] of [['Cela dépend de quelqu’un d’autre','external'],['Hoomy devrait pouvoir le vérifier','agent'],['C’est bloqué','blocked'],['Passer','skip']])more.append(button(label,()=>respond(value),'choice'));card.append(more);report(card,job);return;}
+  if(job.activity?.candidate){const a=job.activity.candidate;line(card,'div',view.projects.find(p=>p.id===a.project_id)?.name,'eyebrow');line(card,'h2',a.title);line(card,'p',a.action);line(card,'p',a.why_now,'muted');
+    card.append(button('Continuer dans Codex',async()=>handoff(await tool('hoomy_handoff',{selection_id:selected})),'primary'));report(card,job);return;}
+  line(card,'div','La suite reste à préciser','eyebrow');line(card,'h2','Je n’ai pas encore d’activité prête.');line(card,'p',job.report?.summary || job.message || 'Précise ton objectif ou change de projet pour orienter la recherche.');line(card,'p',job.report?.unresolved,'muted');
+  card.append(button('Préciser ma demande',async()=>{$('instruction').focus();$('instruction').select();},'primary'));
+  const row=el('div',undefined,'row');row.append(button('Chercher à nouveau',choose,'link'));card.append(row);report(card,job);
+}
+async function copy(text,control){try{await navigator.clipboard.writeText(text);control.textContent='Brief copié';}catch{const t=el('textarea',text);t.readOnly=true;control.after(t);t.select();control.textContent='Sélectionne et copie le brief';}}
+function handoff(data){const card=el('article',undefined,'card');line(card,'div','Prêt à passer à l’action','eyebrow');line(card,'h2',data.title);line(card,'p','Le nouveau chat contient un brief à relire, puis à envoyer.');
+  const link=el('a','Ouvrir un nouveau chat','button primary');link.href=data.new_url;card.append(link);
+  if(data.threads.length){line(card,'p','Ou reprends un échange lié : copie d’abord le brief, puis colle-le dans le chat choisi.','muted');const c=button('Copier le brief',async()=>copy(data.brief,c));card.append(c);
+    for(const thread of data.threads){const row=el('div',undefined,'row');const a=el('a',thread.title,'button');a.href=thread.url;row.append(a);card.append(row);}}
+  const details=el('details');details.append(el('summary','Voir le brief transmis'),el('p',data.brief));card.append(details);card.append(button('Retour à la proposition',async()=>accept(await tool('hoomy_home',{selection_id:selected})),'link'));$('result').replaceChildren(card);
+}
+function showMode(next){mode=next;$('projects-screen').hidden=mode!=='projects';$('now-screen').hidden=mode!=='now';$('projects-tab').setAttribute('aria-pressed',String(mode==='projects'));$('now-tab').setAttribute('aria-pressed',String(mode==='now'));schedule();if(mode==='projects')scheduleState();}
+async function openProfile(id){if(!id){$('profile-picker').value=profile?.project.id||'';return;}if(dirty){$('profile-picker').value=profile.project.id;throw new Error('Enregistre ou annule tes modifications avant de changer de projet.');}clearTimeout(statePoll);projectState=null;profile=await tool('hoomy_project',{project_id:id});$('profile-picker').value=profile.project.id;renderProfile();if(profile.capabilities?.project_state)await loadProjectState(id);}
+function checkCentral(data){if(data.connection?.mode!=='central'||data.connection.origin!==(profile?.connection?.origin||view.connection?.origin))throw new Error('La réponse ne correspond pas à la connexion au service central Hoomy.');}
+async function loadProjectState(projectId){const data=await tool('hoomy_project_state',{project_id:projectId});checkCentral(data);if(profile?.project.id!==projectId)return;projectState=data;renderProjectState();scheduleState();}
+function scheduleState(){clearTimeout(statePoll);if(mode==='projects'&&profile?.capabilities?.project_state&&['queued','running'].includes(projectState?.job?.status))statePoll=setTimeout(()=>{if(busy){scheduleState();return;}run(()=>loadProjectState(profile.project.id));},5000);}
+async function showStateCitation(container,runId,citationId){const data=await tool('hoomy_project_state_citation',{project_id:profile.project.id,run_id:runId,citation_id:citationId});checkCentral(data);container.replaceChildren();container.className='evidence-cache';line(container,'p','Service central Hoomy · '+data.connection.origin,'muted');
+  for(const origin of data.origins){line(container,'span','Machine '+origin.device_id.slice(0,8),'status');line(container,'h3',origin.title||'Conversation sans titre');line(container,'small',`Conversation native : ${origin.session_id} · version ${origin.sequence}`);line(container,'small',`Lignes ${data.line_start}–${data.line_end} · date du message : ${date(data.message_timestamp)}`);line(container,'small',`Modification indiquée par la machine : ${date(origin.source_location.modified_at)}`);line(container,'small',`Reçu par Hoomy : ${date(origin.received_at)}`);}
+  line(container,'p','Citation exacte, dans sa langue d’origine.','muted');line(container,'pre',data.quote);
+  const excerpt=el('pre',data.excerpt);excerpt.style.whiteSpace='pre-wrap';excerpt.style.overflowWrap='anywhere';container.append(excerpt);if(data.excerpt_truncated)line(container,'small','Extrait limité du message conservé.');line(container,'small','Ces échanges historiques ne vérifient pas l’état actuel du logiciel.');
+}
+function renderProjectState(){const root=$('project-state');if(!root)return;root.replaceChildren();line(root,'h2','État synthétisé à partir des échanges');line(root,'p','Une lecture datée des conversations. Elle reste séparée de ton cap et des vérifications actuelles.','muted');
+  if(!projectState){line(root,'p','Lecture du service central Hoomy…','muted');return;}
+  line(root,'p','Service central Hoomy · '+projectState.connection.origin,'muted');
+  const refresh=button('Actualiser la synthèse',async()=>{if(dirty)throw new Error('Enregistre ou annule tes changements de cap avant de demander une synthèse.');await tool('hoomy_refresh_project_state',{project_id:profile.project.id,request_id:crypto.randomUUID(),context_revision:projectState.context_revision,corpus_revision:projectState.corpus_revision,method_hash:projectState.method_hash});await loadProjectState(profile.project.id);},'link');
+  if(!projectState.enabled){refresh.dataset.persistentDisabled='true';refresh.disabled=true;line(root,'p','La génération n’est pas activée pour ce projet.');}root.append(refresh);
+  line(root,'p','Méthode de synthèse : '+projectState.method_version,'muted');
+  const job=projectState.job;if(job?.execution_compatible===false)line(root,'p','L’ancien essai est conservé. La méthode a changé ; une actualisation explicite créera un nouvel essai distinct.','notice');if(job?.status==='queued')line(root,'p','En attente de l’exécuteur Mac. La dernière synthèse reste consultable, même si cette machine est hors ligne.','notice');
+  if(job?.status==='running')line(root,'p',`Synthèse en cours · ${job.completed_calls} appel(s) terminé(s).`,'notice');
+  if(['failed','needs_review'].includes(job?.status))line(root,'p',job.status==='needs_review'?'La génération demande une vérification avant de reprendre. Aucun appel ambigu n’est relancé automatiquement.':projectState.state?'La génération s’est arrêtée. La dernière synthèse reste conservée.':'La génération s’est arrêtée. Aucun résultat n’a été publié.','notice');
+  if(projectState.enabled&&job?.execution_compatible===true&&['failed','needs_review'].includes(job?.status)&&!job.retry_run_id){
+    const request={project_id:profile.project.id,request_id:crypto.randomUUID(),context_revision:projectState.context_revision,corpus_revision:projectState.corpus_revision,method_hash:projectState.method_hash,retry_of_run_id:job.run_id};
+    const retry=button('Nouvel essai après revue',async()=>{
+      if(dirty)throw new Error('Enregistre ou annule tes changements de cap avant de demander un nouvel essai.');
+      retry.dataset.persistentDisabled='true';retry.disabled=true;
+      const review=el('div',undefined,'card soft');line(review,'p','Après revue de l’échec, tu peux autoriser un nouvel essai distinct. L’appel précédent ne sera pas repris. Un nouveau coût est possible.');
+      line(review,'p',job.unknown_usage_calls?'L’usage du précédent appel reste inconnu. Le nouvel essai ne permet pas de connaître ce coût passé.':'Le précédent essai et son usage restent conservés.');
+      review.append(button('Confirmer le nouvel essai',async()=>{if(dirty)throw new Error('Enregistre ou annule tes changements de cap avant de demander un nouvel essai.');await tool('hoomy_refresh_project_state',request);await loadProjectState(request.project_id);},'link'));root.append(review);
+    },'link');const action=el('p');action.append(retry);root.append(action);
+  }
+  const state=projectState.state;if(!state){line(root,'p','Aucune synthèse enregistrée. Une actualisation explicite lance une génération bornée.','muted');return;}
+  line(root,'p','Générée le '+date(state.generated_at),'muted');if(state.stale)line(root,'p',state.stale_reasons?.includes('method_changed')?'Cette synthèse historique utilise une ancienne méthode. Une actualisation explicite produira une lecture distincte avec la méthode actuelle.':'Le contexte ou les sources ont changé depuis cette lecture. Les conclusions doivent être réexaminées.','notice');
+  if(state.suppressed_assertions)line(root,'p',`${state.suppressed_assertions} conclusion(s) masquée(s) car leurs sources ne sont plus consultables.`,'notice');
+  const quality=state.quality;if(quality){line(root,'p',`Vue de lecture filtrée : ${quality.visible_assertions} conclusion(s) · ${quality.visible_uncertainties} incertitude(s).`,'muted');line(root,'small',`Synthèse brute conservée : ${quality.raw_assertions} conclusion(s) · ${quality.raw_uncertainties} incertitude(s).`);line(root,'small','Politique de lecture : '+quality.policy_version+'. Ces contrôles ne prouvent pas à eux seuls le sens des conclusions ni un état actuel.');if(quality.excluded_items.length){line(root,'p',`${quality.excluded_items.length} élément(s) écarté(s) pour qualité. Aucun texte n’a été corrigé ni régénéré.`,'notice');const details=el('details');line(details,'summary','Voir les exclusions de qualité');const reasons={nonterminal_prose:'Phrase non terminée',unclosed_code:'Code ou délimiteur non fermé',unsupported_version:'Version absente des citations propres à cet élément'};for(const item of quality.excluded_items)line(details,'p',item.id+' · '+item.reasons.map(reason=>reasons[reason]||reason).join(' · '));root.append(details);}const withdrawn=quality.raw_assertions-quality.source_eligible_assertions+quality.raw_uncertainties-quality.source_eligible_uncertainties;if(withdrawn)line(root,'p',`${withdrawn} élément(s) masqué(s) après retrait ou modification de leurs sources. Ce retrait est distinct des exclusions de qualité.`,'notice');}
+  const devices=state.device_coverage;if(devices){line(root,'p',`${devices.provided_devices.length} machine(s) représentée(s) dans les extraits · ${devices.cited_devices.length} machine(s) citée(s) dans les conclusions.`,'muted');if(!devices.cross_machine_complete)line(root,'p','Lecture historique partielle entre machines : aucune conclusion citée pour '+devices.uncited_provided_devices.map(id=>'Machine '+id.slice(0,8)).join(', ')+'. Cette synthèse ne décrit pas un état global Mac + VPS.','notice');}
+  const coverage=state.coverage;line(root,'p',`${coverage.provided_messages} message(s) fourni(s) au modèle sur ${coverage.eligible_messages} messages éligibles · ${coverage.provided_sources} source(s) représentée(s).`+(Number.isInteger(coverage.provided_passages)?` ${coverage.provided_passages} passage(s) exact(s) fourni(s).`:''),'muted');
+  for(const [machine,count]of Object.entries(coverage.provided_sources_by_device||{}))line(root,'small',`Machine ${machine.slice(0,8)} · ${count} source(s) représentée(s).`);
+  if(coverage.partial)line(root,'p',`Couverture partielle : ${coverage.unread_messages??Math.max(0,coverage.eligible_messages-coverage.provided_messages)} message(s) non lu(s) et ${coverage.truncated_messages??0} message(s) fourni(s) sous forme de préfixe limité. Cette synthèse ne couvre pas l’ensemble du projet.`,'notice');
+  if(coverage.context_truncated_dimensions?.length)line(root,'p','Certains champs du cap ont été fournis en extrait : '+coverage.context_truncated_dimensions.join(', ')+'. Les déclarations enregistrées restent intactes.','notice');
+  line(root,'small',`${coverage.legacy_unassigned_sources} source(s) historique(s) non attribuée(s) · ${coverage.excluded_internal_sources} session(s) interne(s) de contrôle exclue(s) · ${coverage.partial_sources} source(s) avec omissions d’enregistrements volumineux.`);
+  const kinds={record_fact:'Fait du récit',reported_status:'État déclaré',interpretation:'Interprétation'};
+  const states={reported_done:'Déclaré terminé',reported_open:'Déclaré ouvert',reported_blocked:'Blocage déclaré',unknown:'État actuel inconnu',conflicting:'Déclarations contradictoires'};
+  const display=(item,uncertain=false)=>{const card=el('article',undefined,'source-card');line(card,'span',uncertain?'Incertitude':kinds[item.kind],'status');if(!uncertain){line(card,'h3',item.topic);line(card,'small',states[item.reported_state]);}line(card,'p',item.text);for(const limit of item.limitations||[])line(card,'small',limit);const evidence=el('div');for(const [index,citationId]of item.citation_ids.entries())card.append(button('Pourquoi ? · source '+(index+1),()=>showStateCitation(evidence,state.run_id,citationId),'link'),document.createTextNode(' '));card.append(evidence);root.append(card);};
+  for(const assertion of state.assertions)display(assertion);for(const uncertainty of state.uncertainties)display(uncertainty,true);
+  for(const contradiction of state.contradictions){const card=el('article',undefined,'source-card');line(card,'span','Contradiction à éclaircir','status');line(card,'p',contradiction.text);line(card,'small','Compare les sources des déclarations concernées ; aucune machine ne décide seule de la conclusion.');root.append(card);}
+  if(!state.assertions.length&&!state.uncertainties.length)line(root,'p','Aucune conclusion étayée actuellement consultable.','muted');
+}
+async function readEvidence(container,projectId,sourceId,offset=0){
+  const data=await tool('hoomy_project_evidence',{project_id:projectId,source_id:sourceId,offset,limit:20});
+  container.replaceChildren();
+  container.className='evidence-cache';
+  line(container,'p','Messages visibles dans la conversation, conservés en cache. « Visibles » ne signifie pas partagés publiquement. Les déclarations historiques ne prouvent pas un état actuel.','muted');
+  for(const message of data.messages){const item=el('article',undefined,'evidence-message');line(item,'small',`${message.role==='user'?'Utilisateur':'Assistant'} · lignes ${message.line_start}–${message.line_end}`);const text=el('pre',message.text);text.style.whiteSpace='pre-wrap';text.style.overflowWrap='anywhere';item.append(text);if(message.text_truncated)line(item,'small','Extrait limité de ce message.');container.append(item);}
+  if(!data.messages.length)line(container,'p','Aucun échange dans cette page.');
+  line(container,'small',`${data.total_messages} messages visibles en cache. Aucune analyse déclenchée.`);
+  line(container,'small',`${data.coverage.excluded_records} enregistrement(s) exclus de la collecte.`);
+  line(container,'small',`${data.coverage.excluded_sensitive_messages} message(s) retiré(s) pour confidentialité · ${data.coverage.excluded_context_messages} message(s) de configuration exclus.`);
+  if(data.coverage.excluded_oversized_records)line(container,'p',`Projection partielle : ${data.coverage.excluded_oversized_records} enregistrement(s) trop volumineux ont été ignorés.`,'notice');
+  if(data.next_offset!==null)container.append(button('Échanges suivants',()=>readEvidence(container,projectId,sourceId,data.next_offset),'link'));
+}
+function renderProfile(message=''){
+  const root=$('profile-result');root.replaceChildren();if(!profile)return;
+  const p=profile.project;line(root,'h2',p.name);line(root,'p',message,'notice');for(const warning of profile.warnings||[])line(root,'p',warning.message,'notice');
+  const centralReadOnly=profile.authority?.mode==='central_read_only';
+  if(centralReadOnly)line(root,'p','Ce projet est centralisé. Consulte et modifie son contexte depuis la connexion Hoomy distante. Cette fiche locale reste en lecture seule.','notice');
+  const description=el('details');description.append(el('summary','Comment Hoomy a reconnu ce projet'));line(description,'p',p.purpose||'Description non renseignée.');line(description,'small',`Description issue de Discover · ${date(p.updated_at)}. Elle ne remplace pas ton objectif.`);root.append(description);
+  const form=el('form');form.id='profile-form';line(form,'h2','Ton cap');line(form,'p','Ces informations sont utilisées pour préparer et choisir les prochaines activités. Tous les champs sont facultatifs.','muted');
+  const guide=button('M’aider à formuler mes objectifs',async()=>{if(dirty)throw new Error('Enregistre tes modifications avant d’ouvrir la conversation guidée.');const data=await tool('hoomy_project_guide',{project_id:p.id});const box=el('div',undefined,'card soft');line(box,'p','Ouvre cette conversation dans Codex, puis envoie le message préparé. Hoomy te guidera une question à la fois et te proposera une formulation à valider.');const link=el('a','Ouvrir la conversation guidée','button primary');link.href=data.url;box.append(link);const c=button('Copier le message',async()=>copy(data.brief,c),'link');box.append(c);guide.after(box);},'link');form.append(guide);
+  for(const [key,label,hint] of fields){const field=el('div',undefined,'field');const l=el('label',label);l.htmlFor='field-'+key;const input=el('textarea');input.id=l.htmlFor;input.maxLength=4000;input.placeholder=hint;input.value=profile.fields[key]?.answer||'';input.oninput=()=>{dirty=true;$('save-notice').textContent='Modifications non enregistrées';};field.append(l,input);const item=profile.fields[key];line(field,'small',item?`Ta déclaration · ${date(item.answered_at)}${item.response==='cleared'?' · effacée':item.response!=='answer'?' · sans réponse enregistrée':''}`:'Non renseigné · Hoomy ne suppose pas ta réponse.');form.append(field);}
+  const savebar=el('div',undefined,'savebar');line(savebar,'span','', 'notice');const notice=el('span',message || 'Les informations enregistrées restent disponibles pour les prochaines demandes.','notice');notice.id='save-notice';savebar.append(notice);const row=el('div',undefined,'row');const save=el('button','Enregistrer mes objectifs','primary');save.type='submit';row.append(save,button('Annuler mes modifications',async()=>{dirty=false;await openProfile(p.id);},'link'));savebar.append(row);form.append(savebar);
+  if(centralReadOnly){for(const input of form.querySelectorAll('textarea'))input.readOnly=true;for(const control of [save,guide]){control.dataset.authorityReadOnly='true';control.disabled=true;}}
+  form.onsubmit=e=>{e.preventDefault();return run(async()=>{const values={};for(const [key] of fields){const value=$('field-'+key).value.trim();if(value!==(profile.fields[key]?.answer||''))values[key]=value;}if(!Object.keys(values).length)return;profile=await tool('hoomy_update_project',{project_id:p.id,revision:profile.revision,fields:values});dirty=false;renderProfile('Enregistré. Les prochaines suggestions utiliseront ce contexte.');if(profile.capabilities?.project_state)await loadProjectState(p.id);if(selected)accept(await tool('hoomy_home',{selection_id:selected}));});};root.append(form);
+  if(view.capabilities?.research!==false)root.append(button('Trouver une activité pour ce projet',async()=>{if(dirty)throw new Error('Enregistre tes objectifs avant de demander une activité.');$('project').value=p.id;$('instruction').value='Quelle prochaine activité serait utile pour avancer vers mes objectifs actuels ?';showMode('now');$('instruction').focus();},'primary'));
+  if(profile.capabilities?.project_state){const section=el('section',undefined,'card');section.id='project-state';root.append(section);renderProjectState();}
+  const state=el('section',undefined,'card');line(state,'h2','Activités et état connu');line(state,'p','Les dates et les sources comptent. Une intention ou une conversation ancienne ne prouve pas qu’une tâche reste à faire.','muted');
+  if(!profile.ideas.length)line(state,'p','Aucune activité examinée pour ce projet. Tu peux commencer par préciser ton objectif.');
+  for(const idea of profile.ideas){
+    const validity=Date.parse(idea.valid_until);
+    const expired=idea.state==='completed'&&typeof idea.valid_until==='string'&&Number.isFinite(validity)&&validity<=Date.now();
+    const item=el('div',undefined,'idea');line(item,'span',expired?'Déclaration historique · confirmation expirée':stateNames[idea.state]||idea.state,'status');line(item,'h3',idea.candidate.title);line(item,'p',idea.candidate.action);line(item,'small',`Dernière confirmation : ${date(idea.confirmed_at)}${idea.valid_until?' · valable jusqu’au '+date(idea.valid_until):''}`);
+    if(expired)line(item,'p',`Confirmation expirée le ${date(idea.valid_until)}. Le statut enregistré reste conservé ; il ne vérifie pas l’état actuel.`,'notice');
+    const more=el('details');more.append(el('summary','Pourquoi cet état ?'));line(more,'p',idea.candidate.completion_claim);const evidence=idea.evidence||{};const detail=idea.observation?.evidence||{};line(more,'p',detail.verification?.finding||detail.note||detail.claim||evidence.summary||evidence.finding||evidence.reason||'Aucune preuve détaillée disponible.');if(detail.verification?.limits)line(more,'p',detail.verification.limits);if(detail.answer)line(more,'small','Ta réponse : '+({todo:'reste à faire',already_done:'déjà fait',blocked:'bloqué',unknown:'je ne sais pas',agent:'pour un agent',external:'dépend d’un tiers'}[detail.answer]||detail.answer));line(more,'small',`Origine : ${evidence.source==='user_confirmation'?'ta confirmation':evidence.source==='agent_observation'?'vérification de Hoomy':evidence.source||'non établie'} · Qui peut agir : ${idea.actor==='user'?'toi':idea.actor==='agent'?'un agent':idea.actor||'inconnu'}`);item.append(more);state.append(item);
+  }root.append(state);
+  const reports=el('section',undefined,'card');line(reports,'h2','Ce qui a été compris, ce qui reste incertain');if(!profile.research.length)line(reports,'p','Aucune synthèse de recherche enregistrée spécifiquement pour ce projet.','muted');for(const research of profile.research){line(reports,'small',date(research.created_at));line(reports,'p',research.summary);const list=el('ul');for(const gap of research.unresolved||[])line(list,'li',gap);reports.append(list);}root.append(reports);
+  const sources=el('details',undefined,'card');sources.append(el('summary','Sources liées au projet'));
+  const coverage=profile.evidence_coverage;
+  if(coverage){line(sources,'p',`${coverage.projected.source_locations} emplacement(s) synchronisé(s) · ${coverage.projected.unique_projection_blobs} contenu(s) de conversation distinct(s) en cache.`,'muted');line(sources,'p',`${coverage.legacy_unassigned_sources} source(s) historique(s) non attribuée(s). Leur machine d’origine n’a pas été vérifiée.`,'muted');}
+  if(coverage?.projected.excluded_internal_sources)line(sources,'p',`Sessions internes de contrôle exclues : ${coverage.projected.excluded_internal_sources}.`,'muted');
+  else line(sources,'p',`${profile.sources.length} conversation(s) liée(s). Liées au projet ne signifie pas toutes lues récemment.`,'muted');
+  if(profile.capabilities?.source_chat_navigation===false)line(sources,'p','Les conversations peuvent provenir d’une autre machine ; leur ouverture ici n’est pas disponible.','muted');
+  for(const source of profile.sources){
+    const item=el('section',undefined,'source-card');
+    const badges=el('div',undefined,'source-badges');
+    line(badges,'span',source.cached?(source.device_label||`Machine ${source.device_id.slice(0,8)}`):'Historique importé · machine non attribuée','status');
+    if(source.cached)line(badges,'span','Source synchronisée','status');
+    item.append(badges);
+    if(profile.capabilities?.source_chat_navigation!==false && /^[0-9a-f-]{36}$/i.test(source.id)){const a=el('a',source.title,'source');a.href='codex://threads/'+source.id;item.append(a);}else line(item,'h3',source.title||'Conversation sans titre');
+    if(source.cached){
+      const meta=el('div',undefined,'source-meta');
+      line(meta,'p',`${source.message_count} messages visibles en cache.`);
+      line(meta,'small',`Dernière modification indiquée par la machine : ${date(source.modified_at)}`);
+      line(meta,'small',`Reçu par Hoomy : ${date(source.received_at)}`);
+      line(meta,'small','Aucune analyse demandée pour ces échanges.');
+      line(meta,'small',`${source.coverage.excluded_sensitive_messages} message(s) retiré(s) pour confidentialité · ${source.coverage.excluded_context_messages} message(s) de configuration exclus.`);
+      item.append(meta);
+      if(source.partial)line(item,'p',`Projection partielle · ${source.coverage.excluded_oversized_records} enregistrement(s) trop volumineux exclus.`,'notice');
+      const history=el('details');history.append(el('summary','Détails de collecte'));line(history,'small',`${source.source_location.archive_occurrence?'Archive':'Dossier sessions'} · séquence ${source.sequence} · ${source.version_count} version(s) conservée(s).`);item.append(history);
+      if(profile.capabilities?.cached_project_evidence){const body=el('div');item.append(button('Lire les échanges en cache',()=>readEvidence(body,p.id,source.id),'link'),body);}
+    }else{const meta=el('div',undefined,'source-meta');line(meta,'small','Provenance de la machine non vérifiée.');line(meta,'small',`Dernière activité enregistrée : ${date(source.modified_at)}`);item.append(meta);}
+    sources.append(item);
+  }root.append(sources);
+  const feedback=el('details',undefined,'card');feedback.append(el('summary',`${profile.feedback.length} retour(s) sur les activités`));if(!profile.feedback.length)line(feedback,'p','Pas encore d’évaluation d’activité pour ce projet.');for(const item of profile.feedback){line(feedback,'h3',item.title);line(feedback,'p',({done:'Réalisée',deferred:'Reportée',rejected:'Refusée'})[item.feedback.decision]||item.feedback.decision);line(feedback,'p',item.feedback.reason);}root.append(feedback);
+}
+$('projects-tab').onclick=()=>showMode('projects');$('now-tab').onclick=()=>showMode('now');
+$('profile-picker').onchange=()=>run(()=>openProfile($('profile-picker').value));
+$('request').onsubmit=e=>{e.preventDefault();run(choose);};
+$('resume').onclick=()=>run(async()=>{const data=await tool('hoomy_home',{selection_id:last.id});if(data.selection){$('instruction').value=data.selection.context.instruction;$('minutes').value=data.selection.context.attention_budget;}accept(data);if(data.selection)$('project').value=data.selection.context.project_id||'';});
+if(embedded){hostReady=rpc('ui/initialize',{appInfo:{name:'Hoomy',version:'0.2.1'},appCapabilities:{},protocolVersion:'2026-01-26'}).then(result=>{window.parent.postMessage({jsonrpc:'2.0',method:'ui/notifications/initialized',params:{}},'*');return result;});}
+await run(async()=>accept(await tool('hoomy_home')));
+</script>
+</html>
