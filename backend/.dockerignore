@@ -1,0 +1,4 @@
+*
+!hoomy/
+!hoomy/*.py
+!Dockerfile

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+.build/
+.swiftpm/
+.DS_Store
+*.sqlite*
+*.db*
+*.jsonl
+.env
+runtime/
+dist/
+.venv-agent/

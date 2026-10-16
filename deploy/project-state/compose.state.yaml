@@ -1,0 +1,7 @@
+services:
+  backend:
+    environment:
+      HOOMY_STATE_PROJECT_ID: ${HOOMY_STATE_PROJECT_ID:-}
+  gateway:
+    environment:
+      HOOMY_STATE_PROJECT_ID: ${HOOMY_STATE_PROJECT_ID:-}

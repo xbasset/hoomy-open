@@ -1,33 +1,27 @@
-.DS_Store
+# Private research exports and generated media remain local.
+/output/
+/tmp/
+/sites/*-preview.png
+/sites/hoomy-review/lib/design-data.json
+**/__pycache__/
+*.tsbuildinfo
+# Local credentials and release signing material.
+/secret/
+
+# Review snapshots and detached candidate archives.
+/artifacts/
+
+# Installed dependency trees are never source exports.
+**/node_modules/
+
+# Operator configuration, credentials and private runtime data.
 .env
 .env.*
-!.env.example
-
-# Local agent and editor state
-.agents/
-.claude/
-.codex/
-.idea/
-.vscode/
-
-# Credentials
-*.key
 *.pem
+*.key
 *.p12
-
-# Private inputs and generated local state
-/data/
-/private-data/
-/runtime/
-/runs/
-/output/
-*.jsonl
 *.sqlite
 *.sqlite3
 *.db
+*.jsonl
 *.log
-
-# Temporary files
-.cache/
-tmp/
-*.tmp

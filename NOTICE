@@ -1,0 +1,21 @@
+Hoomy
+Copyright 2026 Hoomy contributors
+
+Project-authored software in this source snapshot is licensed under the
+Apache License, Version 2.0. Project-authored documentation and research are
+licensed separately under Creative Commons Attribution 4.0 International,
+as described in LICENSE-DOCUMENTATION.md. Imported evidence is not included
+in this snapshot and is not relicensed by these grants.
+
+Dependencies retain their own copyright notices and licenses. This source
+snapshot contains dependency lockfiles and download descriptors, not their
+installed packages, model weights, provider outputs or Python distributions.
+The gateway installs its pinned npm dependency tree. Signed collector builds
+include upstream wheel licensing metadata. Python Build Standalone runtime
+archives retain their upstream licensing files. Redistributors must preserve
+those notices when packaging dependency/runtime binaries. The source export
+and candidate archive do not replace the signed collector release process.
+
+Hoomy uses the OpenAI Codex protocol/client and GitHub identity service.
+Their names identify integrations; this project does not claim affiliation,
+endorsement or relicensing of their services or software.

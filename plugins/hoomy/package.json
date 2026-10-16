@@ -1,0 +1,15 @@
+{
+  "name": "hoomy-codex-pilot",
+  "version": "0.2.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.mjs",
+    "preview": "node server.mjs --http",
+    "test": "node --test tests/*.test.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.1",
+    "zod": "^3.24.0"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "release": {
+    "name": "Hoomy",
+    "version": "0.0.1",
+    "status": "research-preview",
+    "tag": "v0.0.1"
+  },
+  "public_base_commit": "d9f535332774c13c05430daef878638bdd0c7528",
+  "reviewed_snapshot": {
+    "source_commit": "53b5119504fa27785d4c4d47f51fb1d36af86907",
+    "archive": {
+      "name": "hoomy-0.0.1-source.tar.gz",
+      "sha256": "a13b7b1c4ee889efefa172f88080406a8a474cc89c9a8b95eb5957de5a667940",
+      "bytes": 697648
+    },
+    "files": 250,
+    "source_files": 249,
+    "export_provenance_sha256": "d16d470c41a317896e735e1b80fece2d685c7dd35b809c048478785b9b195501",
+    "manifest_sha256": "6c0fd53283ee895d2dce575124bd8bd5b5a378e8b44f6b199ba1ef2ae96d40c9"
+  },
+  "provenance_scope": "EXPORT-PROVENANCE.json and release/public-export.json describe the immutable reviewed source snapshot, not the publication tree after the documentation-only changes listed here. Their review-candidate status is retained as historical review metadata. All reviewed files other than the listed modifications are byte-identical to that snapshot. This file is new publication metadata and does not hash itself.",
+  "changes": [
+    {
+      "path": "README.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "reason": "Record publication as a research preview and link this publication provenance.",
+      "reviewed": {
+        "sha256": "f5b5d86786abbd95eaf423fbed74364eabdc7565f7baf44cd1dde1b62279d5ca",
+        "bytes": 7009,
+        "mode": 420
+      },
+      "published": {
+        "sha256": "b8054151f349af7b020b682f49e66159123b04aeeffa1508946182c1e4e751a1",
+        "bytes": 7118,
+        "mode": 420
+      }
+    },
+    {
+      "path": "PUBLICATION-PROVENANCE.json",
+      "kind": "documentation",
+      "license": "CC-BY-4.0",
+      "reason": "Describe publication provenance and the complete documentation-only delta.",
+      "reviewed": null,
+      "published": {
+        "mode": 420,
+        "self_hash_excluded": true
+      }
+    }
+  ]
+}

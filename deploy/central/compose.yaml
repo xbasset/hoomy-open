@@ -1,0 +1,71 @@
+name: hoomy-central
+
+services:
+  backend:
+    build:
+      context: ../../backend
+      dockerfile: Dockerfile
+    command: ["python", "-m", "hoomy.server", "--host", "127.0.0.1", "--port", "8765", "--data-dir", "/data"]
+    volumes:
+      - project-data:/data
+    # The gateway shares this namespace; the private pilot binds only to loopback.
+    ports:
+      - "127.0.0.1:8780:8780"
+    networks:
+      proxy:
+        aliases:
+          - hoomy-central-gateway
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8765/api/health', timeout=2)"]
+      interval: 10s
+      timeout: 3s
+      retries: 6
+
+  gateway:
+    build:
+      context: ../..
+      dockerfile: deploy/central/Dockerfile.gateway
+    network_mode: service:backend
+    depends_on:
+      backend:
+        condition: service_healthy
+    env_file:
+      - ${HOOMY_GATEWAY_ENV_FILE:?Set the path to the protected gateway environment file}
+    environment:
+      HOOMY_PILOT_URL: http://127.0.0.1:8765
+      HOOMY_AUTH_DB: /var/lib/hoomy-auth/auth.sqlite
+      HOOMY_GATEWAY_PORT: "8780"
+      HOOMY_RELEASE_DIR: /srv/hoomy-release
+    volumes:
+      - auth-data:/var/lib/hoomy-auth
+      - ${HOOMY_RELEASE_DIR:?Set the path to the signed public release}:/srv/hoomy-release:ro
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "node", "-e", "require('node:http').get({hostname:'127.0.0.1',port:8780,path:'/health',headers:{host:new URL(process.env.HOOMY_PUBLIC_ORIGIN).host,'x-forwarded-proto':'https'}},r=>{r.resume();r.on('end',()=>process.exit(r.statusCode===200?0:1))}).on('error',()=>process.exit(1))"]
+      interval: 10s
+      timeout: 3s
+      retries: 6
+
+networks:
+  proxy:
+    external: true
+    name: ${HOOMY_PROXY_NETWORK:?Set the reviewed external reverse-proxy network}
+
+volumes:
+  project-data:
+    external: true
+    name: ${HOOMY_PROJECT_DATA_VOLUME:?Set the reviewed project-data volume name}
+  auth-data:
+    external: true
+    name: ${HOOMY_AUTH_DATA_VOLUME:?Set the reviewed authentication volume name}

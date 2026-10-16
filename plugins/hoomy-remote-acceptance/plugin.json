@@ -1,0 +1,17 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "hoomy-remote-acceptance",
+  "version": "0.2.2",
+  "description": "Read central Hoomy project context and cached evidence through authenticated remote MCP.",
+  "author": { "name": "Hoomy" },
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "Hoomy Remote Acceptance",
+        "shortDescription": "Projets et échanges centralisés sur my.hoomy.dev.",
+        "category": "Productivity",
+        "defaultPrompt": ["Ouvre les projets centralisés avec Hoomy Remote Acceptance, sans utiliser Hoomy local."]
+      }
+    }
+  }
+}

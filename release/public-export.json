@@ -1,0 +1,1312 @@
+{
+  "schema_version": 1,
+  "release": {
+    "name": "Hoomy",
+    "version": "0.0.1",
+    "status": "review-candidate"
+  },
+  "base_source_commit": "e4d20a344148d1fd356d2e8f034d9946103f77c2",
+  "files": [
+    {
+      "path": ".dockerignore",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": ".gitignore",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "AGENTS.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "CHARTER.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "LICENSE",
+      "kind": "license",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "LICENSE-DOCUMENTATION.md",
+      "kind": "license",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "NOTICE",
+      "kind": "license",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "README.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "SECURITY.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "agent/README.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "agent/hoomy_agent/__init__.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/hoomy_agent/__main__.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/hoomy_agent/client.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/hoomy_agent/collector.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/hoomy_agent/outbox.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/hoomy_agent/policy.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/hoomy_agent/service.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/hoomy_agent/storage.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/hoomy_agent/stream_json.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/run.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/tests/backend-fixture.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/tests/gateway-fixture.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/tests/test_agent.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/tests/test_collection.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/tests/test_collection_authorization.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/tests/test_compaction.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/tests/test_distribution.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/tests/test_gateway_integration.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/tests/test_mac_service.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/tests/test_source_exclusion.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/tests/test_stream_json.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/tests/test_system_service.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "agent/tests/test_terminal.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "assets/attention.svg",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "backend/.dockerignore",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/.gitignore",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/CONTRACT.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "backend/DISCOVERY_WIZARD.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "backend/Dockerfile",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/FAST_DISCOVERY.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "backend/HYBRID_DISCOVERY.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "backend/README.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Package.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/README.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/APIStore.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/ActLearnView.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/ActModels.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/AgentExplorationProgressView.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/DiscoverySupportViews.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/DiscoveryWizard.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/HoomyPilotApp.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/LiveAssociationsView.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/Models.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/ProjectDetailView.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/ReadyIdeasView.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/RecognitionNextSteps.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/RecognitionTools.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/RecognitionView.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/ResearchExplorerView.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Sources/HoomyPilot/SessionReviewView.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Tests/HoomyPilotTests/ActModelsTests.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Tests/HoomyPilotTests/ModelsTests.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/apps/HoomyPilot/Tests/HoomyPilotTests/WizardTests.swift",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/compose.yaml",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/experiments/decision_ready/README.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "backend/experiments/decision_ready/benchmark.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/experiments/decision_ready/decisions.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/experiments/decision_ready/fixtures.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/experiments/decision_ready/policy.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/experiments/decision_ready/selection_smoke.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/experiments/decision_ready/test_policy.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/__init__.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/act.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/act_inference.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/act_sources.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/act_verification.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/bounded_discovery.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/catalog.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/classifier.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/collector.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/decisions.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/edge.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/evidence_selection.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/exploration.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "backend/hoomy/exploration.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/idea_worker.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/ideas.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/inference.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/ingestion.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/ingestion_rehearsal.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/live_discovery.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/local_triage.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/overview.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/project_dialogue.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/project_state.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/project_state_contract.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/project_state_quality.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/recognition.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/research_explorer.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/server.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/state_executor.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/state_rejection.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/hoomy/store.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/measure_bounded.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/requirements-agent.txt",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/review/INGESTION_REVIEW.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "backend/review/TARGET_DATABASE_MODEL.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "backend/review/ingestion-explorer.html",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/run.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_act.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_bounded_discovery.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_catalog.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_classifier.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_collector.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_decisions.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_edge.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_end_to_end.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_exploration.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_inference.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_ingestion.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_live_discovery.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_local_triage.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_overview.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_project_authority.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_project_dialogue.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_project_index.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_project_profile.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_project_state.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_project_state_quality.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_ready_ideas.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_recognition.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_run.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_server.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_state_bounds.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_state_deployment.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_state_diagnostics.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_state_executor.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_state_method.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_state_quality_client.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_state_rpc.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_state_transport.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_state_validation.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_state_watch_diagnostics.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_state_watch_readiness.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/test_store.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "backend/tests/wizard_preview.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "deploy/central/Caddyfile.hoomy",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "deploy/central/Dockerfile.gateway",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "deploy/central/README.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "deploy/central/collection.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "deploy/central/compose.yaml",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "deploy/central/restart-central.sh",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "deploy/central/smoke-image.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "deploy/project-state/EXECUTOR.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "deploy/project-state/README.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "deploy/project-state/compose.state.yaml",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "deploy/project-state/prepare_watch_service.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "deploy/project-state/rehearse_migration.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "deploy/project-state/run-state.sh",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "distribution/build-release.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "distribution/dependencies.json",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "distribution/install.sh",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "docs/architecture/agentic-development-target.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/architecture/authentication-and-device-enrolment.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/architecture/conversation-ingestion-contract.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/architecture/github-identity-and-repository-access.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/architecture/multi-machine-ingestion.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/architecture/project-state-api.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/architecture/project-state.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/design/brand.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/001-deterministic-project-discovery.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/002-hybrid-discovery-checkpoint.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/003-bounded-hybrid-measurement.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/004-discovery-usage-and-wizard.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/005-data-design-review.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/006-on-demand-act-learn.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/007-rex-20261007.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/007-verification-and-project-facts.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/008-ready-ideas-decisions.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/009-question-pool-and-recovery.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/010-project-dialogue-and-research-explorer.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/010-rex-20261008.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/011-codex-plugin-first-test.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/experiments/012-project-profile.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/README.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/collection-and-authentication-lessons.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/gpc-1-perception-candidate.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/learning-pipeline.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/ops/README.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/ops/assumptions-register.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/ops/backlog.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/ops/current-goal.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/ops/daily-review-template.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/ops/decisions.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/ops/experiment-template.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/ops/goal-template.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/project-charter.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "docs/research/project-state-bounded-method.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "experiments/EXP-0001-conversation-brief/README.md",
+      "kind": "research",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "plugins/hoomy-remote-acceptance/.agents/plugins/marketplace.json",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy-remote-acceptance/README.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "plugins/hoomy-remote-acceptance/mcp.json",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy-remote-acceptance/plugin.json",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy-remote-acceptance/skills/hoomy/SKILL.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "plugins/hoomy/.gitignore",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy/README.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "plugins/hoomy/bridge.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy/mcp.json",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy/mcp.remote.json",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy/package-lock.json",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy/package.json",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy/plugin.json",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy/remote-bridge.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy/server.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy/skills/hoomy/SKILL.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "plugins/hoomy/tests/bridge.test.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy/tests/remote-bridge.test.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy/tests/ui-evidence.test.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "plugins/hoomy/ui/home.html",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "release/README.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "release/public-export.json",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/.gitignore",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/README.md",
+      "kind": "documentation",
+      "license": "CC-BY-4.0"
+    },
+    {
+      "path": "services/hoomy-gateway/backend-client.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/config.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/gateway.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/ingestion-routes.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/ingestion.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/main.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/mcp.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/package-lock.json",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/package.json",
+      "kind": "configuration",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/project-state-routes.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/release.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/store.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/tests/auth.test.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/tests/backend-integration.test.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/tests/device-navigation.test.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/tests/ingestion-integration.test.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/tests/ingestion.test.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/tests/mcp-authorization.test.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/tests/project-state.test.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/tests/release.test.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/tests/security-review.test.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "services/hoomy-gateway/views.mjs",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "tools/export_public.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "tools/package_candidate.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "tools/tests/test_export_public.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    },
+    {
+      "path": "tools/tests/test_package_candidate.py",
+      "kind": "code",
+      "license": "Apache-2.0"
+    }
+  ],
+  "excluded_prefixes": [
+    {
+      "path": ".agents",
+      "reason": "local_agent_configuration"
+    },
+    {
+      "path": "knowledge-base",
+      "reason": "private_knowledge"
+    },
+    {
+      "path": "knowledge-base-pilot",
+      "reason": "private_knowledge"
+    },
+    {
+      "path": "knowledge-base-pilot-v2",
+      "reason": "private_knowledge"
+    },
+    {
+      "path": "sites",
+      "reason": "unselected_marketing_prototype"
+    },
+    {
+      "path": "docs/research",
+      "reason": "unselected_private_research"
+    },
+    {
+      "path": "docs/experiments/results",
+      "reason": "private_measurement_inputs"
+    },
+    {
+      "path": "secret",
+      "reason": "credentials"
+    },
+    {
+      "path": "tmp",
+      "reason": "operator_artifacts"
+    },
+    {
+      "path": "output",
+      "reason": "operator_artifacts"
+    }
+  ],
+  "excluded_files": [
+    {
+      "path": "agent/acceptance-inspect.py",
+      "reason": "operator_acceptance_helper"
+    },
+    {
+      "path": "agent/acceptance-renew.py",
+      "reason": "operator_acceptance_helper"
+    },
+    {
+      "path": "agent/acceptance-revoke.py",
+      "reason": "operator_acceptance_helper"
+    }
+  ]
+}

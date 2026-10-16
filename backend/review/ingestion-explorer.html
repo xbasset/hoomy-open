@@ -1,0 +1,249 @@
+<div id="hoomy-ingestion-review">
+  <style>
+    #hoomy-ingestion-review .hi-layout { display: grid; grid-template-columns: minmax(160px, 1fr) minmax(0, 2fr); gap: 24px; align-items: start; margin-top: 20px; }
+    #hoomy-ingestion-review .hi-chain { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; }
+    #hoomy-ingestion-review .hi-link { text-align: center; color: var(--muted-foreground); padding: 2px 0; }
+    #hoomy-ingestion-review .hi-fields { margin: 12px 0; display: grid; gap: 10px; }
+    #hoomy-ingestion-review .hi-fields dt { font-weight: 500; }
+    #hoomy-ingestion-review .hi-fields dd { margin: 2px 0 0; overflow-wrap: anywhere; }
+    #hoomy-ingestion-review .hi-top { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; align-items: end; margin-bottom: 16px; }
+    #hoomy-ingestion-review .hi-process { margin-top: 20px; }
+    #hoomy-ingestion-review .hi-stages { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+    #hoomy-ingestion-review .hi-stage-row { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 12px; margin: 12px 0; }
+    #hoomy-ingestion-review .hi-stage-row dt { font-weight: 500; }
+    #hoomy-ingestion-review .hi-stage-row dd { margin: 0; }
+    #hoomy-ingestion-review .hi-rule { margin-top: 12px; }
+    #hoomy-ingestion-review .hi-evolution { margin-top: 20px; }
+    #hoomy-ingestion-review .hi-diagram { display: block; width: 100%; height: 280px; }
+    #hoomy-ingestion-review .hi-diagram text { fill: var(--foreground); font-size: 12px; }
+    #hoomy-ingestion-review .hi-diagram .hi-node { fill: var(--background); stroke: var(--muted-foreground); stroke-width: 1; }
+    #hoomy-ingestion-review .hi-diagram .hi-edge { fill: none; stroke: var(--muted-foreground); stroke-width: 2; }
+    #hoomy-ingestion-review .hi-diagram .hi-confirmed { stroke: var(--viz-series-1); stroke-dasharray: none; }
+    #hoomy-ingestion-review .hi-diagram .hi-proposed { stroke-dasharray: 5 4; }
+    #hoomy-ingestion-review .hi-legend { display: flex; flex-wrap: wrap; gap: 16px; }
+    #hoomy-ingestion-review .hi-mark { display: inline-block; width: 22px; border-top: 2px solid var(--viz-series-1); vertical-align: middle; margin-right: 6px; }
+    #hoomy-ingestion-review .hi-mark-proposed { border-top: 2px dashed var(--muted-foreground); }
+    #hoomy-ingestion-review [hidden] { display: none; }
+    @media (max-width: 540px) {
+      #hoomy-ingestion-review .hi-layout { grid-template-columns: 1fr; gap: 14px; }
+      #hoomy-ingestion-review .hi-chain { grid-template-columns: 1fr 1fr; gap: 8px; }
+      #hoomy-ingestion-review .hi-link { display: none; }
+      #hoomy-ingestion-review .hi-stage-row { grid-template-columns: 1fr; gap: 3px; }
+    }
+  </style>
+  <h2>From conversation to understanding</h2>
+  <div class="hi-top">
+    <span class="text-small">Design review · structural symbols only</span>
+    <label class="form-label">Compare
+      <select class="form-select" id="hi-version">
+        <option value="proposed">Proposed next model</option>
+        <option value="built">Current pilot · 4340ac1</option>
+      </select>
+    </label>
+  </div>
+  <div class="nav nav-pills" role="tablist" aria-label="Ingestion review">
+    <button class="nav-link active" type="button" role="tab" id="hi-model-tab" aria-controls="hi-model-panel" aria-selected="true">Model</button>
+    <button class="nav-link" type="button" role="tab" id="hi-process-tab" aria-controls="hi-process-panel" aria-selected="false">Process</button>
+    <button class="nav-link" type="button" role="tab" id="hi-evolution-tab" aria-controls="hi-evolution-panel" aria-selected="false">Evolution</button>
+  </div>
+  <section id="hi-model-panel" role="tabpanel" aria-labelledby="hi-model-tab">
+    <div class="hi-layout">
+      <ol class="hi-chain" aria-label="Evidence to understanding; select a record">
+        <li><button type="button" class="btn btn-block" data-entity="conversation" aria-pressed="false">1 · Conversation</button><div class="hi-link text-small">↓ captured as</div></li>
+        <li><button type="button" class="btn btn-block" data-entity="snapshot" aria-pressed="false">2 · Raw snapshot</button><div class="hi-link text-small">↓ parsed into</div></li>
+        <li><button type="button" class="btn btn-block" data-entity="event" aria-pressed="false">3 · Events</button><div class="hi-link text-small">↓ interpreted by</div></li>
+        <li><button type="button" class="btn btn-block" data-entity="run" aria-pressed="false">4 · Analysis run</button><div class="hi-link text-small">↓ produces</div></li>
+        <li><button type="button" class="btn btn-block" data-entity="brief" aria-pressed="true">5 · Brief / claims</button><div class="hi-link text-small">↓ supports</div></li>
+        <li><button type="button" class="btn btn-block" data-entity="project" aria-pressed="false">6 · Understanding</button></li>
+      </ol>
+      <div aria-live="polite">
+        <h3 id="hi-entity-name">Brief / claims</h3>
+        <div id="hi-entity-status" class="text-small"></div>
+        <dl class="hi-fields" id="hi-entity-fields"></dl>
+      </div>
+    </div>
+  </section>
+  <section id="hi-process-panel" role="tabpanel" aria-labelledby="hi-process-tab" hidden>
+    <div class="hi-process">
+      <div class="hi-stages" aria-label="Process stage">
+        <button class="btn" type="button" data-stage="0" aria-pressed="true">1 Scope</button>
+        <button class="btn" type="button" data-stage="1" aria-pressed="false">2 Inventory</button>
+        <button class="btn" type="button" data-stage="2" aria-pressed="false">3 Normalize</button>
+        <button class="btn" type="button" data-stage="3" aria-pressed="false">4 Extract</button>
+        <button class="btn" type="button" data-stage="4" aria-pressed="false">5 Reconcile</button>
+        <button class="btn" type="button" data-stage="5" aria-pressed="false">6 Surface</button>
+        <button class="btn" type="button" data-stage="6" aria-pressed="false">7 Correct</button>
+      </div>
+      <div aria-live="polite">
+        <h3 id="hi-stage-name"></h3>
+        <dl id="hi-stage-fields"></dl>
+      </div>
+    </div>
+  </section>
+  <section id="hi-evolution-panel" role="tabpanel" aria-labelledby="hi-evolution-tab" hidden>
+    <div class="hi-evolution">
+      <div class="viz-row">
+        <button type="button" class="btn" id="hi-previous" disabled>Previous</button>
+        <span id="hi-step-count" class="tabular-nums">1 / 6</span>
+        <button type="button" class="btn" id="hi-next">Next change</button>
+      </div>
+      <h3 id="hi-step-title"></h3>
+      <svg class="hi-diagram" id="hi-diagram" role="img" aria-labelledby="hi-diagram-title hi-diagram-desc">
+        <title id="hi-diagram-title">Conversation-to-project relationships</title>
+        <desc id="hi-diagram-desc"></desc>
+        <g id="hi-edges"></g>
+        <g id="hi-nodes"></g>
+      </svg>
+      <div class="hi-legend text-small"><span><span class="hi-mark hi-mark-proposed"></span>Provisional link</span><span><span class="hi-mark"></span>User-confirmed link</span></div>
+      <div aria-live="polite" class="hi-rule" id="hi-step-detail"></div>
+    </div>
+  </section>
+  <script>
+    (() => {
+      const root = document.getElementById('hoomy-ingestion-review');
+      const find = id => root.querySelector('#' + id);
+      let version = 'proposed';
+      let selected = 'brief';
+      let stageIndex = 0;
+      let stepIndex = 0;
+      const model = {
+        conversation: {
+          name: 'Conversation identity',
+          built: ['Session', ['Identity', 'Native session ID; source-path hash fallback'], ['Contains', 'One current snapshot pointer; older snapshots retained'], ['Missing boundary', 'No agent / installation namespace or source-location aliases']],
+          proposed: ['Stable source identity', ['Identity', 'Hoomy ID + agent + installation/realm + native ID'], ['Contains', 'Many source locations and immutable snapshots'], ['Rule', 'Archive / file move ≠ another conversation; ambiguity stays unresolved']]
+        },
+        snapshot: {
+          name: 'Raw snapshot',
+          built: ['Raw + parse coupled', ['Identity', 'SHA-256 of complete raw bytes'], ['Contents', 'Raw bytes, normalized messages, path, file mtime'], ['Limit', '16 MiB ceiling; one parse representation per raw hash']],
+          proposed: ['Evidence boundary', ['Identity', 'Content hash + conversation/source relationship'], ['Contents', 'Immutable bytes or manifest; byte coverage; observation time'], ['Versions', 'One snapshot → many parser-versioned normalizations']]
+        },
+        event: {
+          name: 'Normalized event',
+          built: ['Flat text messages', ['Identity', 'Snapshot hash + line number'], ['Contents', 'Role, text, line range, timestamp'], ['Limit', 'Appends change all message IDs; tool calls/results flattened']],
+          proposed: ['Source-linked event identity', ['Identity', 'Append-stable event ID + immutable event version'], ['Contents', 'Actor, kind, content blocks; optional turn/call/parent links'], ['Evidence', 'Normalization revision + raw span; gaps / unsupported blocks accounted']]
+        },
+        run: {
+          name: 'Analysis run',
+          built: ['One saved result per snapshot', ['Inputs', 'Normalized text + current project descriptors'], ['Outputs', 'Brief and project proposals together'], ['History', 'Method metadata retained; completed chunk outputs not checkpointed']],
+          proposed: ['Repeatable interpretation boundary', ['Identity', 'Run ID; stage; input revisions; attempt'], ['Method', 'Parser / prompt / model / config; project and correction revision'], ['History', 'Chunk checkpoints; many runs of identical evidence; prior outputs retained']]
+        },
+        brief: {
+          name: 'Brief and reviewable claims',
+          built: ['Four arrays of statements', ['Sections', 'Intentions · outcomes · open questions · next steps'], ['Statement', 'Text; reported / inferred / suggested; exact quote + message ID'], ['Correction', 'Snapshot + section + index; latest review overlay']],
+          proposed: ['One assertion = one addressable claim', ['Brief', 'Covered event ranges + run ID + versioned claim references'], ['Claim', 'Type; attribution; support; optional owner / effective time'], ['Correction', 'Stable target + new correction record; original claim preserved']]
+        },
+        project: {
+          name: 'Current project understanding',
+          built: ['Mutable inferred state + overrides', ['Links', 'Conversation ↔ project; no explicit link hypothesis record'], ['Updates', 'Latest file mtime wins inferred fields; user overrides prevail'], ['Limit', 'No unified revision / conflict model; brief edits do not update projects']],
+          proposed: ['Reconciled, provisional revision', ['Links', 'Conversation or claim ↔ project hypothesis + evidence'], ['Updates', 'Claims + corrections → revision with causes and effective times'], ['Authority', 'Append-only corrections; unresolved conflict visible; no automatic action']]
+        }
+      };
+      const stages = [
+        {name:'Confirm authorized scope', proposed:[['Input','Source roots + user choice'],['Persist','Scope revision and processing destination'],['Visible','Included, excluded, and unresolved scope'],['Restart','Changed scope → explicit review / deletion choice']], built:[['Input','Local Codex roots + path exclusions'],['Persist','Confirmed control settings'],['Visible','One-time scope screen'],['Limit','Changing scope after ingestion requires full Hoomy reset']]},
+        {name:'Inventory the history', proposed:[['Input','Source locations and metadata'],['Persist','Durable inventory revision + work items'],['Visible','Growing census; denominator not yet complete'],['Restart','Resume enumeration; reserve work for historical backlog']], built:[['Input','Current / archived JSONL paths, newest first'],['Persist','Snapshots; scan signatures stay in memory'],['Visible','Partial-scan aggregate counts'],['Limit','No durable inventory denominator; new work can delay old work']]},
+        {name:'Capture and normalize', proposed:[['Input','Stable complete-record prefix'],['Persist','Raw snapshot → parser revision → source-linked events'],['Visible','Captured / parsed / unsupported / waiting / invalid ranges'],['Restart','Append → new records; parser change → new normalization']], built:[['Input','Whole file after a short quiet interval'],['Persist','Raw bytes + flat normalized messages'],['Visible','Warnings and file-level failures'],['Limit','Partial JSON or >16 MiB rejects the snapshot']]},
+        {name:'Extract source-linked claims', proposed:[['Input','Covered event ranges + permitted context'],['Persist','Chunk outputs, brief claims, run metadata'],['Visible','Interpreted ranges and unchecked semantic support'],['Restart','New model / prompt → new run, same evidence']], built:[['Input','All supported normalized text + projects'],['Persist','Final brief / proposals / method'],['Visible','Conversation queued, analyzed, or failed'],['Limit','Paused chunks restart; a saved snapshot cannot be reanalyzed']]},
+        {name:'Reconcile project hypotheses', proposed:[['Input','Claims + related projects + applicable corrections'],['Persist','Evidence-backed membership / field proposals'],['Visible','Unassigned work, provisional groups, conflicts'],['Restart','Correction → affected relationships, within scope / budget']], built:[['Input','Proposals from the same extraction operation'],['Persist','Immediate project and association updates'],['Visible','Provisional projects and some change reasons'],['Limit','No independently repeatable reconciliation stage']]},
+        {name:'Surface a coherent understanding', proposed:[['Input','Validated proposals and corrections'],['Persist','Revision + before / after + cause'],['Visible','Stable project list; why this changed; coverage'],['Restart','Replay revisions locally; no inference needed']], built:[['Input','Current projects, sessions, recent change entries'],['Persist','Mutable current state + change log'],['Visible','Native list and evidence inspector'],['Limit','Latest 200 change entries; no complete understanding revision']]},
+        {name:'Correct and revisit', proposed:[['Input','Specific claim, membership, or project correction'],['Persist','Append-only correction with target / scope / effective time'],['Visible','Immediate correction; affected reconciliation pending'],['Restart','Supersede a correction explicitly; keep its history']], built:[['Input','Project field / merge / split; brief review'],['Persist','Overrides, redirects, assignment locks; latest brief review'],['Visible','User corrections remain authoritative'],['Limit','Brief edits do not affect inference; no common correction ledger']]}
+      ];
+      const steps = [
+        {name:'First interpretation', links:[[0,0,false]], active:[true,false], proposed:'Revision 1 · C1 provisionally supports Project P.', built:'C1 analysis creates Project P and a provisional association.'},
+        {name:'Another conversation arrives', links:[[0,0,false],[1,0,false]], active:[true,false], proposed:'Revision 2 · C2 is provisionally grouped with P; its evidence and rationale stay attached.', built:'C2 can link to P; proposals are saved with the snapshot analysis.'},
+        {name:'You separate the work', links:[[0,0,false],[1,1,true]], active:[true,true], proposed:'Revision 3 · Correction K1 moves C2 to Q; this relationship is now user-confirmed.', built:'Conversation-level split creates Q and locks C2’s project assignments.'},
+        {name:'Older evidence conflicts', links:[[0,0,false],[1,1,true]], active:[true,true], proposed:'Revision 4 · K1 still applies; the competing P link remains a visible conflict to inspect.', built:'The assignment lock blocks a conflicting P proposal; no dedicated conflict state is surfaced.'},
+        {name:'You revise your correction', links:[[0,0,false],[1,0,true]], active:[true,true], proposed:'Revision 5 · K2 explicitly supersedes K1; both corrections remain inspectable.', built:'Merge / project changes have history; brief re-review replaces the prior snapshot review.'},
+        {name:'Reinterpret identical source bytes', links:[[0,0,false],[1,0,true]], active:[true,true], proposed:'Run B → new revision · compare interpretations; preserve evidence and applicable corrections.', built:'Blocked for an already analyzed snapshot: only one saved analysis per raw snapshot.'}
+      ];
+      function fillFields(element, pairs, rowClass) {
+        element.replaceChildren();
+        for (const [label, value] of pairs) {
+          const wrapper = document.createElement('div');
+          if (rowClass) wrapper.className = rowClass;
+          const dt = document.createElement('dt');
+          const dd = document.createElement('dd');
+          dt.textContent = label;
+          dd.textContent = value;
+          wrapper.append(dt, dd);
+          element.append(wrapper);
+        }
+      }
+      function renderModel() {
+        const item = model[selected];
+        find('hi-entity-name').textContent = item.name;
+        find('hi-entity-status').textContent = item[version][0];
+        fillFields(find('hi-entity-fields'), item[version].slice(1));
+        root.querySelectorAll('[data-entity]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.entity === selected)));
+      }
+      function renderProcess() {
+        find('hi-stage-name').textContent = stages[stageIndex].name;
+        fillFields(find('hi-stage-fields'), stages[stageIndex][version], 'hi-stage-row');
+        root.querySelectorAll('[data-stage]').forEach(button => button.setAttribute('aria-pressed', String(Number(button.dataset.stage) === stageIndex)));
+      }
+      const svgElement = (name, attributes) => {
+        const element = document.createElementNS('http://www.w3.org/2000/svg', name);
+        Object.entries(attributes).forEach(([key, value]) => element.setAttribute(key, String(value)));
+        return element;
+      };
+      function drawRelationships() {
+        const svg = find('hi-diagram');
+        const width = svg.getBoundingClientRect().width;
+        if (!width) return;
+        svg.setAttribute('viewBox', `0 0 ${width} 280`);
+        const positions = [width * 0.25, width * 0.75];
+        const step = steps[stepIndex];
+        const edges = find('hi-edges');
+        const nodes = find('hi-nodes');
+        edges.replaceChildren();
+        nodes.replaceChildren();
+        for (const [source, target, confirmed] of step.links) {
+          edges.append(svgElement('path', {d:`M ${positions[source]} 70 C ${positions[source]} 128, ${positions[target]} 128, ${positions[target]} 185`, class:`hi-edge ${confirmed ? 'hi-confirmed' : 'hi-proposed'}`}));
+        }
+        if (stepIndex === 3 && version === 'proposed') {
+          edges.append(svgElement('path', {d:`M ${positions[1]} 70 C ${positions[1]} 128, ${positions[0]} 128, ${positions[0]} 185`, class:'hi-edge hi-proposed'}));
+          const disputed = svgElement('text', {x:width/2,y:114,'text-anchor':'middle'});
+          disputed.textContent = 'Disputed';
+          edges.append(disputed);
+        }
+        for (let index = 0; index < 2; index++) {
+          const x = positions[index];
+          nodes.append(svgElement('rect', {x:x-56,y:26,width:112,height:44,rx:5,class:'hi-node'}));
+          const source = svgElement('text', {x,y:53,'text-anchor':'middle'});
+          source.textContent = `Conversation C${index+1}`;
+          nodes.append(source);
+          if (step.active[index]) {
+            nodes.append(svgElement('rect', {x:x-56,y:185,width:112,height:44,rx:5,class:'hi-node'}));
+            const project = svgElement('text', {x,y:212,'text-anchor':'middle'});
+            project.textContent = index === 0 ? 'Project P' : 'Project Q';
+            nodes.append(project);
+            if (index === 1 && stepIndex >= 4) {
+              const retired = svgElement('text', {x,y:251,'text-anchor':'middle'});
+              retired.textContent = version === 'built' ? 'Merged → P' : 'No current links';
+              nodes.append(retired);
+            }
+          }
+        }
+        const descriptions = step.links.map(([source,target,confirmed]) => `C${source+1} links to Project ${target === 0 ? 'P' : 'Q'}, ${confirmed ? 'user confirmed' : 'provisional'}`);
+        if (stepIndex === 3 && version === 'proposed') descriptions.push('Competing C2 to P link is disputed; confirmed Q link remains');
+        find('hi-diagram-desc').textContent = descriptions.join('. ') + '. Schematic relationships, not conversation data.';
+      }
+      function renderEvolution() {
+        find('hi-step-title').textContent = steps[stepIndex].name;
+        find('hi-step-count').textContent = `${stepIndex+1} / ${steps.length}`;
+        find('hi-step-detail').textContent = steps[stepIndex][version];
+        find('hi-previous').disabled = stepIndex === 0;
+        find('hi-next').disabled = stepIndex === steps.length - 1;
+        drawRelationships();
+      }
+      root.querySelectorAll('[data-entity]').forEach(button => button.addEventListener('click', () => { selected = button.dataset.entity; renderModel(); }));
+      root.querySelectorAll('[data-stage]').forEach(button => button.addEventListener('click', () => { stageIndex = Number(button.dataset.stage); renderProcess(); }));
+      find('hi-version').addEventListener('change', event => { version = event.target.value; renderModel(); renderProcess(); renderEvolution(); });
+      find('hi-previous').addEventListener('click', () => { if (stepIndex > 0) stepIndex--; renderEvolution(); });
+      find('hi-next').addEventListener('click', () => { if (stepIndex < steps.length-1) stepIndex++; renderEvolution(); });
+      new ResizeObserver(drawRelationships).observe(find('hi-diagram'));
+      renderModel();
+      renderProcess();
+      renderEvolution();
+    })();
+  </script>
+</div>
