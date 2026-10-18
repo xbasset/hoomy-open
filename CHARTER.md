@@ -24,7 +24,9 @@ Open research does not mean open personal data. Source sessions remain private, 
 
 ## Where we begin
 
-Our first use case is a coding-agent chief of staff. We begin with [EXP-0001](experiments/EXP-0001-conversation-brief/README.md): turning one selected Codex session into an accurate, evidence-linked brief that is quick to correct.
+Our first use case is a coding-agent chief of staff. [EXP-0001](experiments/EXP-0001-conversation-brief/README.md) defines a starting protocol: turn one selected Codex session into an accurate, evidence-linked brief that is quick to correct. That protocol remains **not run**.
+
+Development has also explored project discovery, activity suggestions, a Codex plugin, multi-machine collection and bounded project-state synthesis. The [research journey](docs/research/research-journey.md) connects those observations to the current 0.0.1 preview and distinguishes implemented mechanisms from unverified benefits. Use the [question index](docs/experiments/README.md) to find the original records; these trials do not retroactively complete EXP-0001.
 
 We will share the method, code, aggregate results, failures, and what they change about our next step. Each experiment should help us decide whether to improve, expand, redesign, or stop.
 

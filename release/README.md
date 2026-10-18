@@ -1,5 +1,12 @@
 # Preparing the Hoomy 0.0.1 source candidate
 
+This document describes the original candidate-export workflow. Version 0.0.1 is
+now published; current `main` documentation can evolve beyond that immutable release.
+`EXPORT-PROVENANCE.json`, `PUBLICATION-PROVENANCE.json` and the export manifest apply
+to their recorded source pins and reviewed selection, not automatically to later
+files or documentation changes. Keep the release tag, assets and provenance intact.
+For current reader routes, start with [the README](../README.md).
+
 This is an unsigned, reviewable source snapshot. No public repository, tag or
 release is changed by the preparation tools. The candidate must be reviewed
 before any publication to Hoomy Open.
@@ -65,6 +72,9 @@ trial. Historical authored findings state their own limits. No private session
 corpus or operator acceptance payload is an install prerequisite.
 
 ## Branch roles
+
+The branch details below are historical preparation context, not clone or install
+instructions and not the current public contribution workflow.
 
 The private `main` baseline was `44e87e3`. The isolated
 `xbt-agent/release-0-0-1` candidate started at `e4d20a3`; the original
