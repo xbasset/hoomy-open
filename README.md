@@ -1,13 +1,17 @@
 # Hoomy
 
-**Find the thread of a coding project across conversations and machines.**
+**Building an AI companion that understands your projects and helps you decide what deserves your attention.**
 
-Hoomy explores a chief of staff for developers: bring together selected Codex
-conversations, keep your intent explicit, and build a project view you can inspect
-and correct through its sources.
+An open research project, starting with developers and their coding agents.
 
-The open question is whether that view is **accurate, useful, and easier to review
-than reopening the conversations**. We are building the tools to test it.
+The current preview supplies infrastructure for experimenting with project
+understanding from authorized conversations and, as the research develops,
+verifiable facts. It brings selected Codex conversations together, keeps your
+intent explicit, and presents project views you can inspect through their sources.
+It does not yet automatically fact-check those views.
+
+Our first concrete question is whether that view is **accurate, useful, and easier
+to review than reopening the conversations**. We are building the tools to test it.
 
 ## A working research preview
 
